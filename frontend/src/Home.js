@@ -10,7 +10,7 @@ const Home = () => {
                     <br/>
                     Based in Spring Valley, California, USA
                     <br/>
-                    <a href='/about' className='link'>More About Me</a>
+                    <a href='/about' className='link'>More About Me!</a>
                 </p>
                 <div className='icons' id='li-gh'>
                     {
@@ -43,7 +43,7 @@ const Home = () => {
                         <p key={0} id='1' className='proj'>Project 1</p>
                         <p key={1} className='proj'>Project 2</p>
                         <p key={2} className='proj'>Project 3</p>
-                        <a key={3} href='/projects' className='proj link'>More Projects</a>
+                        <a key={3} href='/projects' className='proj link'>More Projects!</a>
                     </div>
                     <div id='display'>
                         {/* placeholder... replace later */}
@@ -55,9 +55,11 @@ const Home = () => {
             </div>
             <div id='quick-links'>
                 <h2> Contact </h2>
+                <p className='msg'>I'm just a click away. Let's connect!</p>
                 {/* placeholder... replace later */}
                 <p> Location </p>
                 <p> Mail </p>
+                <a href='/contact' className='link'> More!</a>
             </div>
         </main>
     );
