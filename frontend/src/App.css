@@ -2,17 +2,21 @@
   height: 10vh;
   border-bottom: 1px solid black;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
 }
-#logo, .link {
+#logo {
   margin: auto;
+  width: 50%;
 }
 #nav {
   display: flex;
   justify-content: space-evenly;
-  min-height: 100%;
+  width: 50%;
+  align-items: center;
 }
 .link {
   text-decoration: none;
-  padding: 0px 3px;
+}
+.link:visited {
+  color: black;
 }
