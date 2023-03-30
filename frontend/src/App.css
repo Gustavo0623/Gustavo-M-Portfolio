@@ -24,7 +24,7 @@
 
 /* Home */
 
-#intro {
+#intro, #proj-home {
   width: 100%;
   height: 600px;
   display: flex;
@@ -33,23 +33,26 @@
   align-items: center;
 }
 
-.split {
+.split, #showcase {
   width: 60%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  border: 1px solid black;
 }
 
-h1 {
+h1, h2 {
   margin-top: 0;
+  width: 100%;
 }
 
 #portrait {
   height: 100%;
+  border: 1px solid black;
 }
 
-.info {
+.info, .left-show {
   width: 450px;
 }
 
@@ -70,4 +73,24 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+/* project highlight */
+.left-show {
+  width: 40%;
+}
+
+#display {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.separate {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
 }
