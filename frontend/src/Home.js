@@ -42,27 +42,31 @@ const Home = () => {
                             <p key={0} id='1' className='proj'>Project 1</p>
                             <p key={1} className='proj'>Project 2</p>
                             <p key={2} className='proj'>Project 3</p>
-                            <a key={3} href='/projects' className='proj link'>More Projects!</a>
+                            <a key={3} href='/projects' id='proj-link' className='proj link'>More Projects!</a>
                         </div>
                     </div>
                     <div id='display'>
                         {/* placeholder... replace later */}
                         <p id='proj-photo'>Image</p>
                         <div className='separate'>
-                            <p> GH Code </p>
-                            <p> Live Demo </p>
+                            <p className='half proj'> GH Code </p>
+                            <p className='half proj'> Live Demo </p>
                         </div>
                     </div>
                 </div>
             </div>
             {/* quick links */}
             <div id='quick-links'>
-                <h2> Contact </h2>
-                <p className='msg'>I'm just a click away. Let's connect!</p>
-                {/* placeholder... replace later */}
-                <p> Location </p>
-                <p> Mail </p>
-                <a href='/contact' className='link'> More!</a>
+                <div id='home-contact'>
+                    <h2> Contact </h2>
+                    <p className='msg'>I'm just a click away. Let's connect!</p>
+                    {/* placeholder... replace later */}
+                    <div className='separate' id='sep-contact'>
+                        <p className='msg h-contact'> Location </p>
+                        <p className='msg h-contact'> Mail </p>
+                        <a href='/contact' className='link msg h-contact'> More!</a>
+                    </div>
+                </div>
             </div>
         </main>
     );
