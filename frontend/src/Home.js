@@ -4,34 +4,31 @@ const Home = () => {
     return (
         <main>
             <div id='intro'>
-                <h1 id='title'> Full Stack Software Developer </h1>
-                <p className='msg'> 
-                    Full Stack Software Developer breaking into the tech industry. 
-                    <br/>
-                    Based in Spring Valley, California, USA
-                    <br/>
-                    <a href='/about' className='link'>More About Me!</a>
-                </p>
-                <div className='icons' id='li-gh'>
-                    {
-                    // <p> tags = temporary. replace with LinkedIn and Github icon links  
-                    }
-                    <p className='icon'>LI</p>
-                    <p className='icon'>GH</p>
+                <div className='split'>
+                    <div className='info'>
+                        <h1 id='title'> Full Stack Software Developer </h1>
+                        <p className='msg'> 
+                            Full Stack Software Developer breaking into the tech industry. 
+                            <br/>
+                            Based in Spring Valley, California, USA
+                            <br/>
+                            <a href='/about' className='link'>More About Me!</a>
+                        </p>
+                        <div className='icons' id='li-gh'>
+                            {
+                            // <p> tags = temporary. replace with LinkedIn and Github icon links  
+                            }
+                            <p className='icon'>LI</p>
+                            <p className='icon'>GH</p>
+                        </div>
+                    </div>
+                    <img id='portrait' src='N/A' alt='Portrait of Gustavo Martinez'/>
                 </div>
+
                 <div id='t-stack'>
                     <p className='t-title'> Tech Stack </p>
                     <div className='stack-group'>
-                        <p>Front-End</p>
-                        <div className='icons'> </div>
-                    </div>
-                    <div className='stack-group'>
-                        <p>Back-End</p>
-                        <div className='icons'> </div>
-                    </div>
-                    <div className='stack-group'>
-                        <p>Other</p>
-                        <div className='icons'> </div>
+                        <p className='icon list'>Js</p>
                     </div>
                 </div>
             </div>
