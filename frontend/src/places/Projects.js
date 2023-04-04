@@ -1,17 +1,26 @@
 const Projects = () => {
     return (
-        <main>
+        <main id='about'>
             <h1>A Glimpse Of What Is Possible</h1>
-            {/* showcase similar to home and about */}
-            <h2>Frontend</h2>
-            <p>project</p>
-            <h2>Backend</h2>
-            <p>project</p>
-            <p> 
-                Like what you see?
-                <br/> 
-                <a href='/contact' className='link'> Contact Me!</a>
-            </p>
+            <div id='pro-tabs'>
+                <h2 className='tab'>Front-End</h2>
+                <h2 className='tab'>Back-End</h2>
+            </div>
+            <div id='pro-split'>
+                <div id='bg-content'>
+                    {/* showcase similar to home and about */}
+                    <h3 className='tab'>Project</h3>
+                    <h3 className='tab'>Project</h3>
+                </div>
+                <div id='bg-display'>
+                    <div id='pro-display'></div>
+                    <p id='pro-link'> 
+                        Like what you see?
+                        <br/> 
+                        <a href='/contact' className='link'> Contact Me!</a>
+                    </p>
+                </div>
+            </div>
         </main>
     );
 }
