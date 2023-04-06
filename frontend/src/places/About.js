@@ -3,7 +3,7 @@ const About = () => {
         <main id='about'>
             <h1 id='title'>Who Is Gustavo Martinez?</h1>
             {/* potential showcase styling similar to home projects, to keep styling consistent */}
-            <h2>My Mission</h2>
+            <h2 id='drop'>My Mission</h2>
             <p className='msg'>
                 As a software developer, my mission is to use my skills and creativity to build innovative and user-friendly software solutions that make a positive impact on people's lives. 
                 I believe in constantly learning and adapting to new technologies and methodologies, and in working collaboratively with my team and clients to deliver high-quality results. 

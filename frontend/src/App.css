@@ -198,3 +198,60 @@ cursor: pointer;
   text-align: center;
   flex: 1;
 }
+
+/* Contact Me */
+
+#msg-form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+#msg-area, #socials {
+  width: 100%;
+}
+
+#drop {
+  line-height: 2em;
+}
+
+#msg-form > button {
+  line-height: 1.5em;
+  margin-top: 1em;
+}
+
+#form-split {
+  line-height: 2em;
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#user-info, #msg-content {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+#user-info {
+  flex-basis: 35%;
+}
+
+#msg-content {
+  flex-basis: 50%;
+  height: 100%;
+}
+
+input {
+  height: 1.5em;
+}
+
+textarea {
+  height: 100%;
+}
+
+#socials {
+  margin-top: 100px;
+}

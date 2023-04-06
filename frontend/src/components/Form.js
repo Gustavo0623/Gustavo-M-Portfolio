@@ -23,17 +23,23 @@ function ContactForm() {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <label htmlFor="name">Name:</label>
-            <input type="text" id="name" name="user_name" value={user_name} onChange={(event) => setName(event.target.value)} required />
+        <form id='msg-form' onSubmit={handleSubmit}>
 
-            <label htmlFor="email">Email:</label>
-            <input type="email" id="email" name="user_email" value={user_email} onChange={(event) => setEmail(event.target.value)} required />
+            <div id='form-split'>
+                <div id='user-info'>
+                    <label htmlFor="name">Name</label>
+                    <input type="text" id="name" name="user_name" value={user_name} onChange={(event) => setName(event.target.value)} required />
 
-            <label htmlFor="message">Message:</label>
-            <textarea id="message" name="message" rows="5" value={message} onChange={(event) => setMessage(event.target.value)} required></textarea>
-
+                    <label htmlFor="email">Email</label>
+                    <input type="email" id="email" name="user_email" value={user_email} onChange={(event) => setEmail(event.target.value)} required />
+                </div>
+                <div id='msg-content'>
+                    <label htmlFor="message">Message</label>
+                    <textarea id="message" name="message" rows="5" value={message} onChange={(event) => setMessage(event.target.value)} required></textarea>
+                </div>
+            </div>
             <button type="submit">Send</button>
+
         </form>
     );
 }
