@@ -33,6 +33,21 @@ const Home = () => {
                 </div>
             </div>
 
+            {/* Work Status */}
+            <div id='w-status'>
+                <div id='otw'>
+                    <h2> Open To Work! </h2>
+                    <p className='msg'> 
+                        I am currently seeking 
+                        <strong> Entry Level </strong> 
+                        positions in
+                        <strong> Software Engineering/ Development, Front End/ Back End Web Development, Full Stack Development, React Application Development </strong>
+                        (as well as other languages listed in my Tech Stack)
+                        <strong>, and UI/ UX Design.</strong>
+                    </p>
+                </div>
+            </div>
+
             {/* project display */} 
             <div id='proj-home'> 
                 <div id='showcase'>

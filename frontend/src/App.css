@@ -24,7 +24,7 @@
 
 /* Home */
 
-#intro, #proj-home, #quick-links {
+#intro, #proj-home, #quick-links, #w-status {
   width: 100%;
   height: 100%;
   margin-top: 100px;
@@ -82,7 +82,7 @@ h2 {
   justify-content: flex-start;
 }
 
-#t-stack {
+#t-stack, #otw {
   width: 60%;
   display: flex;
   flex-direction: column;
