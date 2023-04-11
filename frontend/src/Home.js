@@ -32,9 +32,9 @@ const Home = () => {
                 <div id='t-stack'>
                     <p className='t-title'> Tech Stack </p>
                     <div className='stack-group'>
-                        <img src='./Photos/icons8-html-5-is-a-software-solution-stack-that-defines-the-properties-and-behaviors-of-web-page-48.png' alt='HTML5 logo' className='icon list'/>
-                        <img src='./Photos/icons8-cascading-style-sheets-language-used-for-describing-the-presentation-of-a-document-48.png' alt='CSS3 logo' className='icon list'/>
-                        <img src='./Photos/icons8-javascript-48.png' alt='javascript logo' className='icon list'/>
+                        <img src='./Photos/icons8-html-5-is-a-software-solution-stack-that-defines-the-properties-and-behaviors-of-web-page-48.png' alt='HTML5 logo' className='icon'/>
+                        <img src='./Photos/icons8-cascading-style-sheets-language-used-for-describing-the-presentation-of-a-document-48.png' alt='CSS3 logo' className='icon'/>
+                        <img src='./Photos/icons8-javascript-48.png' alt='javascript logo' className='icon'/>
                     </div>
                 </div>
             </div>

@@ -9,8 +9,8 @@ const Projects = () => {
             <div id='pro-split'>
                 <div id='bg-content'>
                     {/* showcase similar to home and about */}
-                    <h3 className='tab'>Project</h3>
-                    <h3 className='tab'>Project</h3>
+                    <h3 className='tab'>Fit-Track</h3>
+                    <h3 className='tab'>Go-Bird-Go</h3>
                 </div>
                 <div id='bg-display'>
                     <div id='pro-display'></div>

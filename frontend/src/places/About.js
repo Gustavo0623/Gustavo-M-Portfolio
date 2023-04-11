@@ -10,15 +10,40 @@ const About = () => {
                 My goal is to be a reliable and efficient partner for businesses and organizations looking to develop custom software that meets their specific needs. 
                 Through my work, I strive to create meaningful and sustainable solutions that not only solve problems but also inspire and delight users.
             </p>
+            <h2 id='bg-abt'>Background</h2>
             <div id='bg-split'>
                 <div id='bg-content'>
-                    <h2 id='bg-abt'>Background</h2>
                     <h3>Educational</h3>
                     <h3>Professional</h3>
                 </div>
                 {/* content component to be displayed here conditionally depending on click */}
                 <div id='bg-display'>
-
+                    <div className='stack-group'>
+                        <div className='milestone'>
+                            <strong className='msg'>HS Diploma</strong>
+                        </div>
+                        <div className='milestone'>
+                            <strong className='msg'>Associate's Degree</strong>
+                        </div>
+                        <div className='milestone'>
+                            <strong className='msg'>Professional Certificate</strong>
+                        </div>
+                    </div>
+                    {/* to become component */}
+                    <div className='ms-description'>
+                        <div className='list'>
+                            <p className='msg'><strong>School / Establishment</strong></p>
+                            <p className='msg'>Monte Vista High School</p>
+                        </div>
+                        <div className='list'>
+                            <p className='msg'><strong>Location</strong></p>
+                            <p className='msg'>3230 Sweetwater Springs Blvd, Spring Valley, CA 91977</p>
+                        </div>
+                        <div className='list'>
+                            <p className='msg'><strong>Contact Number</strong></p>
+                            <p className='msg'>(619) 660-3000</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>

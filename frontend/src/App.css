@@ -132,6 +132,7 @@ h2 {
 }
 
 .stack-group {
+  margin-top: 1em;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -195,7 +196,7 @@ h2 {
   margin: auto;
 }
 
-#about, #bg-split {
+#about, #bg-abt {
   margin-top: 100px;
 }
 
@@ -254,7 +255,7 @@ cursor: pointer;
   flex-direction: row;
 }
 
-#msg-area, #socials {
+#msg-area, #socials, .list, .ms-description{
   width: 100%;
 }
 
@@ -301,3 +302,4 @@ textarea {
 #socials {
   margin-top: 100px;
 }
+
