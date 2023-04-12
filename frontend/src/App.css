@@ -1,6 +1,5 @@
 #head {
   height: 10vh;
-  border-bottom: 1px solid black;
   display: flex;
   align-items: center;
 }
@@ -70,7 +69,7 @@ h2 {
 }
 
 #sep-contact > .join > .place-mark {
-  width: 30px;
+  width: 24px;
 }
 
 #portrait {
@@ -89,10 +88,6 @@ h2 {
   display: flex;
   flex-direction: row;
   align-items: center;
-}
-
-.separate > .join {
-  justify-content: center;
 }
 
 .description {
@@ -206,6 +201,10 @@ h2 {
   flex-direction: row;
 }
 
+#bg-split {
+  margin-bottom: 100px;
+}
+
 #bg-content {
   display: flex;
   flex-direction: column;
@@ -220,6 +219,14 @@ h2 {
   justify-content: center;
   align-items: center;
   flex: 2;
+}
+
+#bg-display > .stack-group {
+  justify-content: space-between;
+}
+
+.milestone > strong, #bg-content > h3 {
+  cursor: pointer;
 }
 
 
@@ -238,12 +245,25 @@ cursor: pointer;
 }
 
 #pro-display {
+  width: 100%;
   flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #pro-link {
   text-align: center;
   flex: 1;
+}
+
+#toggle-view {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
 }
 
 /* Contact Me */

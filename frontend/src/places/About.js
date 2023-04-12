@@ -1,4 +1,12 @@
+import { useState } from "react";
+import Certificate from "../components/Certificate";
+import College from "../components/College";
+import HighSchool from "../components/HighSchool";
+
 const About = () => {
+
+    const [edu, setEdu] = useState(0)
+
     return (
         <main id='about'>
             <h1 id='title'>Who Is Gustavo Martinez?</h1>
@@ -20,30 +28,17 @@ const About = () => {
                 <div id='bg-display'>
                     <div className='stack-group'>
                         <div className='milestone'>
-                            <strong className='msg'>HS Diploma</strong>
+                            <strong className='msg' onClick={() => {setEdu(0)}}>HS Diploma</strong>
                         </div>
                         <div className='milestone'>
-                            <strong className='msg'>Associate's Degree</strong>
+                            <strong className='msg' onClick={() => {setEdu(1)}}>Associate's Degree</strong>
                         </div>
                         <div className='milestone'>
-                            <strong className='msg'>Professional Certificate</strong>
+                            <strong className='msg' onClick={() => {setEdu(2)}}>Professional Certificate</strong>
                         </div>
                     </div>
                     {/* to become component */}
-                    <div className='ms-description'>
-                        <div className='list'>
-                            <p className='msg'><strong>School / Establishment</strong></p>
-                            <p className='msg'>Monte Vista High School</p>
-                        </div>
-                        <div className='list'>
-                            <p className='msg'><strong>Location</strong></p>
-                            <p className='msg'>3230 Sweetwater Springs Blvd, Spring Valley, CA 91977</p>
-                        </div>
-                        <div className='list'>
-                            <p className='msg'><strong>Contact Number</strong></p>
-                            <p className='msg'>(619) 660-3000</p>
-                        </div>
-                    </div>
+                    { edu === 0 ? <HighSchool/> : edu === 1 ? <College/> : edu === 2 ? <Certificate/> : null}
                 </div>
             </div>
         </main>
