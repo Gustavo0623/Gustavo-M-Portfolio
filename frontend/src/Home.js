@@ -32,11 +32,11 @@ const Home = () => {
                 <div id='t-stack'>
                     <p className='t-title'> Tech Stack </p>
                     <div className='stack-group'>
-                        <img src='./Photos/icons8-html-5-is-a-software-solution-stack-that-defines-the-properties-and-behaviors-of-web-page-48.png' alt='HTML5 logo' className='icon'/>
-                        <img src='./Photos/icons8-cascading-style-sheets-language-used-for-describing-the-presentation-of-a-document-48.png' alt='CSS3 logo' className='icon'/>
+                        <img src='./Photos/icons8-html-5-is-a-software-solution-stack-that-defines-the-properties-and-behaviors-of-web-page-48.png' alt='HTML5 logo' className='icon shrink'/>
+                        <img src='./Photos/icons8-cascading-style-sheets-language-used-for-describing-the-presentation-of-a-document-48.png' alt='CSS3 logo' className='icon shrink'/>
                         <img src='./Photos/icons8-javascript-48.png' alt='javascript logo' className='icon'/>
                         <img src='./Photos/icons8-react-100.png' alt='React logo' className='icon'/>
-                        <img src='./Photos/icons8-sql-64.png' alt='SQL logo' className='icon'/>
+                        <img src='./Photos/icons8-sql-64.png' alt='SQL logo' className='icon i-grow'/>
                     </div>
                 </div>
             </div>
@@ -71,8 +71,11 @@ const Home = () => {
                         {/* placeholder... replace later */}
                         <img src='./Photos/Screen Shot 2023-01-18 at 10.19.13 PM (2).jpg' alt='Selected App Screenshot' id='proj-photo'/>
                         <div className='separate'>
-                            <a href='https://github.com/proptechnovator/fittrack-v2' className='half proj-link proj link'> GH Code </a>
-                            <a href='https://fittrack-frontend.herokuapp.com/' className='half proj-link proj link'> Live Demo </a>
+                            <div className='join'>
+                                <img src='./Photos/icons8-github-94.png' alt='place marker' className='place-mark i-grow'/>
+                                <a href='https://github.com/proptechnovator/fittrack-v2' className='half proj-link proj link'> Code </a>
+                            </div>
+                            <a href='https://fittrack-frontend.herokuapp.com/' className='half proj-link proj link' id='live'> Live Demo </a>
                         </div>
                     </div>
                 </div>
@@ -89,7 +92,7 @@ const Home = () => {
                             <p className='description'>Spring Valley</p>
                         </div>
                         <div className='join half'>
-                            <img src='./Photos/icons8-mail-64.png' alt='place marker' className='place-mark'/>
+                            <img src='./Photos/icons8-mail-64.png' alt='place marker' className='place-mark i-pad'/>
                             <p className='description'>gustavo.0623@outlook.com</p>
                         </div>
                         <a href='/contact' className='link msg h-contact'> More!</a>
