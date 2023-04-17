@@ -12,6 +12,20 @@ const Contact = () => {
 
             <div id='socials'>
                 <h2 id='drop'>Follow Me To Stay Updated</h2>
+                <div className='stack-group'>
+                    <a href='https://www.linkedin.com/in/gustavo-martinez-765940204/'>
+                        <img src='./Photos/icons8-linkedin-94.png' alt='linkedin' className='icon'/>
+                    </a>
+                    <a href='https://github.com/Gustavo0623'>
+                        <img src='./Photos/icons8-github-94.png' alt='github' className='icon'/>
+                    </a>
+                    <a href='https://twitter.com/Gogusfitness'>
+                        <img src='./Photos/icons8-twitter-circled-94.png' alt='github' className='icon'/>
+                    </a>
+                    <a href='https://www.instagram.com/go.gus.06/'>
+                        <img src='./Photos/icons8-instagram-94.png' alt='github' className='icon'/>
+                    </a>
+                </div>
             </div>
         </main>
     );

@@ -35,6 +35,8 @@ const Home = () => {
                         <img src='./Photos/icons8-html-5-is-a-software-solution-stack-that-defines-the-properties-and-behaviors-of-web-page-48.png' alt='HTML5 logo' className='icon'/>
                         <img src='./Photos/icons8-cascading-style-sheets-language-used-for-describing-the-presentation-of-a-document-48.png' alt='CSS3 logo' className='icon'/>
                         <img src='./Photos/icons8-javascript-48.png' alt='javascript logo' className='icon'/>
+                        <img src='./Photos/icons8-react-100.png' alt='React logo' className='icon'/>
+                        <img src='./Photos/icons8-sql-64.png' alt='SQL logo' className='icon'/>
                     </div>
                 </div>
             </div>
@@ -61,14 +63,13 @@ const Home = () => {
                     <div className='left-show'>    
                         <div id='selector'>
                             <p key={0} className='proj'>Fit-Track</p>
-                            <p key={1} className='proj'>Project 2</p>
-                            <p key={2} className='proj'>Project 3</p>
+                            <p key={1} className='proj'>Go-Bird-Go</p>
                             <a key={3} href='/projects' className='proj-link proj link'>More Projects!</a>
                         </div>
                     </div>
                     <div id='display'>
                         {/* placeholder... replace later */}
-                        <img src='./Photos/Screen Shot 2023-01-18 at 10.19.13 PM (1).jpg' alt='Selected App Screenshot' id='proj-photo'/>
+                        <img src='./Photos/Screen Shot 2023-01-18 at 10.19.13 PM (2).jpg' alt='Selected App Screenshot' id='proj-photo'/>
                         <div className='separate'>
                             <a href='https://github.com/proptechnovator/fittrack-v2' className='half proj-link proj link'> GH Code </a>
                             <a href='https://fittrack-frontend.herokuapp.com/' className='half proj-link proj link'> Live Demo </a>

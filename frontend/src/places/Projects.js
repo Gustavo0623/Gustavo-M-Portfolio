@@ -14,7 +14,7 @@ const Projects = () => {
                 </div>
                 <div id='bg-display'>
                     <div id='pro-display'>
-                        <img src='./Photos/Screen Shot 2023-01-18 at 10.19.13 PM (1).jpg' alt='Selected App Screenshot' id='proj-photo'/>
+                        <img src='./Photos/Screen Shot 2023-01-18 at 10.19.13 PM (2).jpg' alt='Selected App Screenshot' id='proj-photo'/>
                         <button id='toggle-view'> Details </button>
                     </div>
                     <p id='pro-link'> 

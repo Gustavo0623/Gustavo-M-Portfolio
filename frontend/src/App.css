@@ -323,3 +323,7 @@ textarea {
   margin-top: 100px;
 }
 
+#socials > .stack-group {
+  justify-content: space-between;
+}
+
