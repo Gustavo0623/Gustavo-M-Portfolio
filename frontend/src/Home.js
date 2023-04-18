@@ -1,6 +1,22 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 const Home = () => {
+
+    const [isHovering, setIsHovering] = useState(false);
+    const [s1, setS1] = useState(false);
+    const [s2, setS2] = useState(false);
+    const [s3, setS3] = useState(false);
+    const [s4, setS4] = useState(false);
+
+
+    const handleMouseEnter = () => {
+        setIsHovering(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsHovering(false);
+    };
+
     return (
         <main>
             <div id='intro'>
@@ -32,12 +48,13 @@ const Home = () => {
                 <div id='t-stack'>
                     <p className='t-title'> Tech Stack </p>
                     <div className='stack-group'>
-                        <img src='./Photos/icons8-html-5-is-a-software-solution-stack-that-defines-the-properties-and-behaviors-of-web-page-48.png' alt='HTML5 logo' className='icon shrink'/>
-                        <img src='./Photos/icons8-cascading-style-sheets-language-used-for-describing-the-presentation-of-a-document-48.png' alt='CSS3 logo' className='icon shrink'/>
-                        <img src='./Photos/icons8-javascript-48.png' alt='javascript logo' className='icon'/>
-                        <img src='./Photos/icons8-react-100.png' alt='React logo' className='icon'/>
-                        <img src='./Photos/icons8-sql-64.png' alt='SQL logo' className='icon i-grow'/>
+                        <img src='./Photos/icons8-html-5-is-a-software-solution-stack-that-defines-the-properties-and-behaviors-of-web-page-48.png' alt='HTML5 logo' className={isHovering ? 'spin icon shrink' : 'icon shrink'} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}/>
+                        <img src='./Photos/icons8-cascading-style-sheets-language-used-for-describing-the-presentation-of-a-document-48.png' alt='CSS3 logo' className={s1 ? 's-1 icon shrink' : 'icon shrink'} onMouseEnter={()=> {setS1(true)}} onMouseLeave={()=> {setS1(false)}}/>
+                        <img src='./Photos/icons8-javascript-48.png' alt='javascript logo' className={s2 ? 's-2 icon' : 'icon'} onMouseEnter={()=> {setS2(true)}} onMouseLeave={()=> {setS2(false)}}/>
+                        <img src='./Photos/icons8-react-100.png' alt='React logo' className={s3 ? 's-3 icon' : 'icon'} onMouseEnter={()=> {setS3(true)}} onMouseLeave={()=> {setS3(false)}}/>
+                        <img src='./Photos/icons8-sql-64.png' alt='SQL logo' className={s4 ? 's-4 icon i-grow' : 'icon i-grow'} onMouseEnter={()=> {setS4(true)}} onMouseLeave={()=> {setS4(false)}}/>
                     </div>
+                    <p id='value'> { isHovering ? 'HTML5' : s1 ? 'CSS3' : s2 ? 'Javascript' : s3 ? 'React.js' : s4 ? 'SQL' : '' }</p>
                 </div>
             </div>
 

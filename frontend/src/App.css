@@ -1,12 +1,81 @@
+main {
+  z-index: -1;
+  background-image: url('../public/Photos/background.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  animation: moveBg 40s linear infinite;
+  min-height: 100vh;
+}
+
+.spin, .s-1 {
+  animation: spin-small 1s linear infinite;
+}
+
+.s-2, .s-3 {
+  animation: spin 1s linear infinite;
+}
+
+.s-4 {
+  animation: spin-l 1s linear infinite;
+}
+
+.l-spin {
+  animation: spin 1s linear;
+}
+
+@keyframes spin-small {
+  0% { transform: scale(.75) rotateY(0deg); }
+  100% { transform: scale(.75) rotateY(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
+
+@keyframes spin-l {
+  0% { transform: scale(1.2) rotateY(0deg); }
+  100% { transform: scale(1.2) rotateY(360deg); }
+}
+
+@keyframes warp {
+  0% { border-radius: 50% 50% 50% 50% / 74% 22% 74% 22%; }
+  50% { border-radius: 50% 50% 50% 50% / 22% 74% 22% 74%; }
+  100% { border-radius: 50% 50% 50% 50% / 74% 22% 74% 22%; }
+}
+
+@keyframes moveBg {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
 #head {
-  height: 10vh;
+  min-height: 10vh;
   display: flex;
   align-items: center;
+  background-color: transparent;
 }
+
 #logo {
+  position: relative;
   margin: auto;
+  padding-left: 1em;
   flex: 3;
 }
+
+#logo-img {
+  width: 235px;
+  object-fit: contain;
+}
+
 #nav {
   display: flex;
   justify-content: space-evenly;
@@ -37,6 +106,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#intro {
+  margin-top: 0px;
+  padding-top: 100px;
+}
+
+#quick-links {
+  margin-bottom: 0px;
+  padding-bottom: 100px;
 }
 
 .split, #showcase {
@@ -74,7 +153,9 @@ h2 {
 
 #portrait {
   width: 250px;
-  border-radius: 20px;
+  animation: warp 5s linear infinite;
+  background-color: #a1fbfe;
+  filter: drop-shadow(0 0 20px #f422d9);
 }
 
 #portrait, #proj-home {
@@ -221,9 +302,10 @@ h2 {
 #about {
   height: auto;
   margin: auto;
+  padding-top: 100px;
 }
 
-#about, #bg-abt {
+#bg-abt {
   margin-top: 100px;
 }
 
@@ -235,16 +317,30 @@ h2 {
 
 #bg-split {
   margin-bottom: 100px;
+  align-items: stretch;
 }
 
 #bg-content {
   display: flex;
   flex-direction: column;
-  justify-content: left;
   flex: 1;
+  margin-top: 1em;
+}
+
+#bg-content > :first-child {
+  margin: 0%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+#bg-content > :last-child {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-bottom: 0%;
 }
 
 #bg-display {
+  margin-top: 1em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -254,6 +350,7 @@ h2 {
 
 #bg-display > .stack-group {
   justify-content: space-between;
+  margin-top: 0%;
 }
 
 .milestone > strong, #bg-content > h3 {
