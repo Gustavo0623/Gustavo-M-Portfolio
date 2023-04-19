@@ -20,7 +20,9 @@ const Home = () => {
     return (
         <main>
             <div id='intro'>
-                <h1 id='title'> Full Stack Software Developer </h1>
+                <div id='title'>
+                    <h1> Full Stack Software Developer </h1>
+                </div>
                 <div className='split'>
                     <div className='info'>
                         <p className='description'> Full Stack Software Developer breaking into the tech industry. </p>
@@ -35,10 +37,10 @@ const Home = () => {
                             // <p> tags = temporary. replace with LinkedIn and Github icon links  
                             }
                             <a href='https://www.linkedin.com/in/gustavo-martinez-765940204/'>
-                                <img src='./Photos/icons8-linkedin-94.png' alt='linkedin' className='icon'/>
+                                <img src='./Photos/icons8-linkedin-94.png' alt='linkedin' className='icon h-shrink'/>
                             </a>
                             <a href='https://github.com/Gustavo0623'>
-                                <img src='./Photos/icons8-github-94.png' alt='github' className='icon'/>
+                                <img src='./Photos/icons8-github-94.png' alt='github' className='icon h-shrink'/>
                             </a>
                         </div>
                     </div>
