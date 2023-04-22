@@ -30,7 +30,7 @@ const Home = () => {
                             <img src='./Photos/icons8-place-marker-94.png' alt='place marker' className='place-mark'/>
                             <p className='description'>Spring Valley, California, USA</p>
                         </div>
-                        <a href='/about' className='link description'>More About Me!</a>
+                        <a href='/about' className='link description tab'>More About Me!</a>
                         
                         <div className='icons' id='li-gh'>
                             {
@@ -81,20 +81,22 @@ const Home = () => {
                 <div id='showcase'>
                     <div className='left-show'>    
                         <div id='selector'>
-                            <p key={0} className='proj'>Fit-Track</p>
-                            <p key={1} className='proj'>Go-Bird-Go</p>
-                            <a key={3} href='/projects' className='proj-link proj link'>More Projects!</a>
+                            <h3 className='proj msg tab'>Fit-Track</h3>
+                            <h3 className='proj msg tab'>Go-Bird-Go</h3>
+                            <a href='/projects' className='proj-link proj msg link tab'>More Projects!</a>
                         </div>
                     </div>
                     <div id='display'>
                         {/* placeholder... replace later */}
                         <img src='./Photos/Screen Shot 2023-01-18 at 10.19.13 PM (2).jpg' alt='Selected App Screenshot' id='proj-photo'/>
-                        <div className='separate'>
+                        <div className='separate gap'>
                             <div className='join'>
                                 <img src='./Photos/icons8-github-94.png' alt='place marker' className='place-mark i-grow'/>
-                                <a href='https://github.com/proptechnovator/fittrack-v2' className='half proj-link proj link'> Code </a>
+                                <a href='https://github.com/proptechnovator/fittrack-v2' className='half proj-link proj link tab'> Code </a>
                             </div>
-                            <a href='https://fittrack-frontend.herokuapp.com/' className='half proj-link proj link' id='live'> Live Demo </a>
+                            <p className='half proj-link proj' id='live'>
+                                <a href='https://fittrack-frontend.herokuapp.com/' className='link tab'>Live Demo</a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -114,7 +116,9 @@ const Home = () => {
                             <img src='./Photos/icons8-mail-64.png' alt='place marker' className='place-mark i-pad'/>
                             <p className='description'>gustavo.0623@outlook.com</p>
                         </div>
-                        <a href='/contact' className='link msg h-contact'> More!</a>
+                        <a href='/contact' className='link msg h-contact'>
+                            <p className='tab'>More!</p>
+                        </a>
                     </div>
                 </div>
             </div>

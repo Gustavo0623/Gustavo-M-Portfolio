@@ -38,7 +38,7 @@ function ContactForm() {
                     <textarea id="message" name="message" rows="5" value={message} onChange={(event) => setMessage(event.target.value)} required></textarea>
                 </div>
             </div>
-            <button type="submit">Send</button>
+            <button id='toggle-view' className='tab' type="submit">Send</button>
 
         </form>
     );

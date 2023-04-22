@@ -27,20 +27,20 @@ const About = () => {
                     <h2>Background</h2>
                     <div id='bg-split'>
                         <div id='bg-content'>
-                            <h3 id='edu'>Educational</h3>
-                            <h3 id='prof'>Professional</h3>
+                            <h3 className='tab'>Educational</h3>
+                            <h3 className='tab'>Professional</h3>
                         </div>
                         {/* content component to be displayed here conditionally depending on click */}
                         <div id='bg-display'>
                             <div className='stack-group'>
                                 <div className='milestone'>
-                                    <strong className='msg' onClick={() => {setEdu(0)}}>{edu !== 0 ? 'H.S.' : 'HS Diploma'}</strong>
+                                    <strong className={edu === 0 ? 'msg tab select' : 'msg tab'} onClick={() => {setEdu(0)}}>{edu !== 0 ? 'H.S.' : 'HS Diploma'}</strong>
                                 </div>
                                 <div className='milestone'>
-                                    <strong className='msg' onClick={() => {setEdu(1)}}>{edu !== 1 ? 'A.S.' : "Associate's Degree"}</strong>
+                                    <strong className={edu === 1 ? 'msg tab select' : 'msg tab'} onClick={() => {setEdu(1)}}>{edu !== 1 ? 'A.S.' : "Associate's Degree"}</strong>
                                 </div>
                                 <div className='milestone'>
-                                    <strong className='msg' onClick={() => {setEdu(2)}}>{edu !== 2 ? 'P.C.' : 'Professional Certificate'}</strong>
+                                    <strong className={edu === 2 ? 'msg tab select' : 'msg tab'} onClick={() => {setEdu(2)}}>{edu !== 2 ? 'P.C.' : 'Professional Certificate'}</strong>
                                 </div>
                             </div>
                             {/* to become component */}

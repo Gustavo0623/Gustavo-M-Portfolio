@@ -1,4 +1,10 @@
+import { useState } from "react";
+import FTDetails from "../components/FtDetails";
+
 const Projects = () => {
+
+    const [details, setDetails] = useState(false)
+
     return (
         <main>
             <div className='about'>
@@ -16,13 +22,23 @@ const Projects = () => {
                         </div>
                         <div id='bg-display'>
                             <div id='pro-display'>
-                                <img src='./Photos/Screen Shot 2023-01-18 at 10.19.13 PM (2).jpg' alt='Selected App Screenshot' id='proj-photo'/>
-                                <button id='toggle-view'> Details </button>
+                                { !details ? <img src='./Photos/Screen Shot 2023-01-18 at 10.19.13 PM (2).jpg' alt='Selected App Screenshot' id='proj-photo'/> : null}
+                                { !details ? <button id='toggle-view' className='gap tab' onClick={()=>{setDetails(true)}}> Details </button> : <button id='toggle-view' className='tab' onClick={()=>{setDetails(false)}}> Project Photo </button>}
+                                { details ? <FTDetails/>: null}
+                            </div>
+                            <div className='separate'>
+                                <div className='join'>
+                                    <img src='./Photos/icons8-github-94.png' alt='place marker' className='place-mark i-grow'/>
+                                    <a href='https://github.com/proptechnovator/fittrack-v2' className='half proj-link proj link tab'> Code </a>
+                                </div>
+                                <p className='half proj-link proj' id='live'>
+                                    <a href='https://fittrack-frontend.herokuapp.com/' className='link tab'>Live Demo</a>
+                                </p>
                             </div>
                             <p id='pro-link'> 
                                 Like what you see?
                                 <br/> 
-                                <a href='/contact' className='link'> Contact Me!</a>
+                                <a href='/contact' className='link tab'> Contact Me!</a>
                             </p>
                         </div>
                     </div>
