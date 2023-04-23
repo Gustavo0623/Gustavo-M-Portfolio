@@ -11,10 +11,10 @@ const About = () => {
         <main>
             <div className='about fade-in'>
                 <div className='blur pad'>
-                    <h1>Who Is Gustavo Martinez?</h1>
+                    <h1 className='fade-in'>Who Is Gustavo Martinez?</h1>
                     {/* potential showcase styling similar to home projects, to keep styling consistent */}
-                    <h2 id='drop'>My Mission</h2>
-                    <p className='msg'>
+                    <h2 id='drop' className='fade-in'>My Mission</h2>
+                    <p className='msg fade-in'>
                         As a software developer, my mission is to use my skills and creativity to build innovative and user-friendly software solutions that make a positive impact on people's lives. 
                         I believe in constantly learning and adapting to new technologies and methodologies, and in working collaboratively with my team and clients to deliver high-quality results. 
                         My goal is to be a reliable and efficient partner for businesses and organizations looking to develop custom software that meets their specific needs. 
@@ -24,15 +24,15 @@ const About = () => {
             </div>
             <div className='about'>
                 <div className='blur pad bottom'>
-                    <h2>Background</h2>
+                    <h2 className='fade-in'>Background</h2>
                     <div id='bg-split'>
                         <div id='bg-content'>
-                            <h3 className='tab'>Educational</h3>
-                            <h3 className='tab'>Professional</h3>
+                            <h3 className='tab fade-in'>Educational</h3>
+                            <h3 className='tab fade-in'>Professional</h3>
                         </div>
                         {/* content component to be displayed here conditionally depending on click */}
                         <div id='bg-display'>
-                            <div className='stack-group'>
+                            <div className='stack-group fade-in'>
                                 <div className='milestone'>
                                     <strong className={edu === 0 ? 'msg tab select' : 'msg tab'} onClick={() => {setEdu(0)}}>{edu !== 0 ? 'H.S.' : 'HS Diploma'}</strong>
                                 </div>

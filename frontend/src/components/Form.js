@@ -23,22 +23,22 @@ function ContactForm() {
     };
 
     return (
-        <form id='msg-form' onSubmit={handleSubmit}>
+        <form id='msg-form' className='fade-in' onSubmit={handleSubmit}>
 
             <div id='form-split'>
                 <div id='user-info'>
-                    <label htmlFor="name">Name</label>
-                    <input type="text" id="name" name="user_name" value={user_name} onChange={(event) => setName(event.target.value)} required />
+                    <label htmlFor="name" className='fade-in'>Name</label>
+                    <input type="text" id="name" name="user_name" className='fade-in' value={user_name} onChange={(event) => setName(event.target.value)} required />
 
-                    <label htmlFor="email">Email</label>
-                    <input type="email" id="email" name="user_email" value={user_email} onChange={(event) => setEmail(event.target.value)} required />
+                    <label htmlFor="email" className='fade-in'>Email</label>
+                    <input type="email" id="email" className='fade-in' name="user_email" value={user_email} onChange={(event) => setEmail(event.target.value)} required />
                 </div>
                 <div id='msg-content'>
-                    <label htmlFor="message">Message</label>
-                    <textarea id="message" name="message" rows="5" value={message} onChange={(event) => setMessage(event.target.value)} required></textarea>
+                    <label htmlFor="message" className='fade-in'>Message</label>
+                    <textarea id="message" className='fade-in' name="message" rows="5" value={message} onChange={(event) => setMessage(event.target.value)} required></textarea>
                 </div>
             </div>
-            <button id='toggle-view' className='tab' type="submit">Send</button>
+            <button id='toggle-view' className='tab fade-in' type="submit">Send</button>
 
         </form>
     );
