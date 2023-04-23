@@ -19,7 +19,7 @@ const Home = () => {
 
     return (
         <main>
-            <div id='intro'>
+            <div id='intro' className='fade-in'>
                 <div id='title'>
                     <h1> Full Stack Software Developer </h1>
                 </div>

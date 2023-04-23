@@ -4,7 +4,7 @@ function FTDetails () {
 
 
     return (
-        <div id='fitTrack'>
+        <div id='fitTrack' className='fade-in'>
             <p className='msg' id='proj-role'><strong className='msg role'>Role: </strong> Project Lead</p>
             
             <ul className='detail-list'>

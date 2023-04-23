@@ -9,7 +9,7 @@ const About = () => {
 
     return (
         <main>
-            <div className='about'>
+            <div className='about fade-in'>
                 <div className='blur pad'>
                     <h1>Who Is Gustavo Martinez?</h1>
                     {/* potential showcase styling similar to home projects, to keep styling consistent */}

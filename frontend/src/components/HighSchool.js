@@ -1,6 +1,6 @@
 function HighSchool() {
     return (
-        <div className='ms-description'>
+        <div className='ms-description fade-in'>
             <div className='list'>
                 <p className='msg'><strong>School / Establishment</strong></p>
                 <p className='msg'>Monte Vista High School</p>
