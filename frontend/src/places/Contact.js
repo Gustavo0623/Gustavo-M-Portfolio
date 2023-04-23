@@ -3,17 +3,17 @@ import ContactForm from '../components/Form';
 
 const Contact = () => {
     return (
-        <main className='about fade-in'>
+        <main className='about'>
             <div className='blur pad'>
-                <h1 className='fade-in'>Contact Me</h1>
+                <h1 className='fade-in title'>Contact Me</h1>
                 <div id='msg-area'>
-                    <h2 id='drop' className='fade-in'>Drop Me a Message</h2>
+                    <h2 id='drop' className='fade-in title'>Drop Me a Message</h2>
                     <ContactForm/>
                 </div>
             </div>
 
             <div id='socials' className='blur pad bottom'>
-                <h2 id='drop' className='fade-in'>Follow Me To Stay Updated</h2>
+                <h2 id='drop' className='fade-in title'>Follow Me To Stay Updated</h2>
                 <div className='stack-group fade-in'>
                     <a href='https://www.linkedin.com/in/gustavo-martinez-765940204/'>
                         <img src='./Photos/icons8-linkedin-94.png' alt='linkedin' className='icon h-shrink'/>

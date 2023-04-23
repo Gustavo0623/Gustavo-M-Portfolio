@@ -11,9 +11,9 @@ const About = () => {
         <main>
             <div className='about fade-in'>
                 <div className='blur pad'>
-                    <h1 className='fade-in'>Who Is Gustavo Martinez?</h1>
+                    <h1 className='fade-in title'>Who Is Gustavo Martinez?</h1>
                     {/* potential showcase styling similar to home projects, to keep styling consistent */}
-                    <h2 id='drop' className='fade-in'>My Mission</h2>
+                    <h2 id='drop' className='fade-in title'>My Mission</h2>
                     <p className='msg fade-in'>
                         As a software developer, my mission is to use my skills and creativity to build innovative and user-friendly software solutions that make a positive impact on people's lives. 
                         I believe in constantly learning and adapting to new technologies and methodologies, and in working collaboratively with my team and clients to deliver high-quality results. 
@@ -24,23 +24,23 @@ const About = () => {
             </div>
             <div className='about'>
                 <div className='blur pad bottom'>
-                    <h2 className='fade-in'>Background</h2>
+                    <h2 className='fade-in title'>Background</h2>
                     <div id='bg-split'>
                         <div id='bg-content'>
-                            <h3 className='tab fade-in'>Educational</h3>
-                            <h3 className='tab fade-in'>Professional</h3>
+                            <h3 className='tab fade-in title'>Educational</h3>
+                            <h3 className='tab fade-in title'>Professional</h3>
                         </div>
                         {/* content component to be displayed here conditionally depending on click */}
                         <div id='bg-display'>
                             <div className='stack-group fade-in'>
                                 <div className='milestone'>
-                                    <strong className={edu === 0 ? 'msg tab select' : 'msg tab'} onClick={() => {setEdu(0)}}>{edu !== 0 ? 'H.S.' : 'HS Diploma'}</strong>
+                                    <strong className={edu === 0 ? 'msg title tab select' : 'msg title tab'} onClick={() => {setEdu(0)}}>{edu !== 0 ? 'H.S.' : 'HS Diploma'}</strong>
                                 </div>
                                 <div className='milestone'>
-                                    <strong className={edu === 1 ? 'msg tab select' : 'msg tab'} onClick={() => {setEdu(1)}}>{edu !== 1 ? 'A.S.' : "Associate's Degree"}</strong>
+                                    <strong className={edu === 1 ? 'msg title tab select' : 'msg title tab'} onClick={() => {setEdu(1)}}>{edu !== 1 ? 'A.S.' : "Associate's Degree"}</strong>
                                 </div>
                                 <div className='milestone'>
-                                    <strong className={edu === 2 ? 'msg tab select' : 'msg tab'} onClick={() => {setEdu(2)}}>{edu !== 2 ? 'P.C.' : 'Professional Certificate'}</strong>
+                                    <strong className={edu === 2 ? 'msg title tab select' : 'msg title tab'} onClick={() => {setEdu(2)}}>{edu !== 2 ? 'P.C.' : 'Professional Certificate'}</strong>
                                 </div>
                             </div>
                             {/* to become component */}

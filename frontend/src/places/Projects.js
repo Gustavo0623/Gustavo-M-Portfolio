@@ -9,7 +9,7 @@ const Projects = () => {
         <main>
             <div className='about fade-in'>
                 <div className='blur pad bottom'>
-                    <h1 className='fade-in'>A Glimpse Of What Is Possible</h1>
+                    <h1 className='fade-in title'>A Glimpse Of What Is Possible</h1>
                     <div id='pro-tabs'>
                         <h2 className='tab fade-in'>Front-End</h2>
                         <h2 className='tab fade-in'>Back-End</h2>
