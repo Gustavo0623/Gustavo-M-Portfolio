@@ -6,7 +6,7 @@ const Projects = () => {
     const [details, setDetails] = useState(false)
 
     return (
-        <main>
+        <main data-speed='1'>
             <div className='about fade-in'>
                 <div className='blur pad bottom'>
                     <h1 className='fade-in title'>A Glimpse Of What Is Possible</h1>

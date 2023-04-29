@@ -7,7 +7,7 @@ const About = () => {
     const [edu, setEdu] = useState(true)
 
     return (
-        <main>
+        <main data-speed='1'>
             <div className='about fade-in'>
                 <div className='blur pad'>
                     <h1 className='fade-in title'>Who Is Gustavo Martinez?</h1>

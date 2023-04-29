@@ -1,4 +1,4 @@
-import { React } from 'react';
+import { React , useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './Home';
@@ -11,6 +11,18 @@ import Resume from './places/Resume';
 
 
 function App() {
+
+  // to set scroll background behavior
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      const backgrounds = document.querySelector('main');
+        const speed = backgrounds.getAttribute('data-speed');
+        const xPos = -(window.pageYOffset / speed);
+        backgrounds.style.backgroundPosition = `${xPos}px 0`;
+    })
+  }, [])
+
+
   return (
     <BrowserRouter>
       <Navigation/>

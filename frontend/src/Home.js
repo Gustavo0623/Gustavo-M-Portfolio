@@ -18,7 +18,7 @@ const Home = () => {
     };
 
     return (
-        <main>
+        <main data-speed='1'>
             <div className='scroll'>
                 <div id='intro' className='fade-in'>
                     <div id='title'>

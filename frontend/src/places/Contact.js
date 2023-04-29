@@ -3,7 +3,7 @@ import ContactForm from '../components/Form';
 
 const Contact = () => {
     return (
-        <main className='about'>
+        <main className='about' data-speed='1'>
             <div className='blur pad'>
                 <h1 className='fade-in title'>Contact Me</h1>
                 <div id='msg-area'>
