@@ -26,8 +26,8 @@ const About = () => {
                     <h2 className='fade-in title'>Background</h2>
                     <div id='bg-split'>
                         <div id='bg-content'>
-                            <h3 className='tab fade-in' onClick={()=>{setEdu(true)}}>Education</h3>
-                            <h3 className='tab fade-in' onClick={()=>{setEdu(false)}}>Work</h3>
+                            <h3 className={edu ? 'fade-in select' : 'tab fade-in'} onClick={()=>{setEdu(true)}}>Education</h3>
+                            <h3 className={!edu ? 'fade-in select' : 'tab fade-in'} onClick={()=>{setEdu(false)}}>Work</h3>
                         </div>
                         {/* content component to be displayed here conditionally depending on click */}
                         {edu ? <Education/> : <Work/> }

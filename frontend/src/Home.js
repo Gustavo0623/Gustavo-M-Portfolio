@@ -8,6 +8,8 @@ const Home = () => {
     const [s3, setS3] = useState(false);
     const [s4, setS4] = useState(false);
 
+    const [project, setProject] = useState(0)
+
 
     const handleMouseEnter = () => {
         setIsHovering(true);
@@ -82,8 +84,8 @@ const Home = () => {
                     <div id='showcase'>
                         <div className='left-show fade-in'>    
                             <div id='selector'>
-                                <h3 className='proj msg tab'>Fit-Track</h3>
-                                <h3 className='proj msg tab'>Go-Bird-Go</h3>
+                                <h3 className={project === 0 ? 'proj msg select' : 'proj msg tab' } onClick={()=>{setProject(0)}} >Fit-Track</h3>
+                                <h3 className={project === 1 ? 'proj msg select' : 'proj msg tab' } onClick={()=>{setProject(1)}} >Go-Bird-Go</h3>
                                 <a href='/projects' className='proj-link proj msg link tab'>More Projects!</a>
                             </div>
                         </div>

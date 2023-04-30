@@ -4,6 +4,8 @@ import FTDetails from "../components/FtDetails";
 const Projects = () => {
 
     const [details, setDetails] = useState(false)
+    const [front, setFront] = useState(true)
+    const [project, setProject] = useState(0)
 
     return (
         <main data-speed='1'>
@@ -11,14 +13,14 @@ const Projects = () => {
                 <div className='blur pad bottom'>
                     <h1 className='fade-in title'>A Glimpse Of What Is Possible</h1>
                     <div id='pro-tabs'>
-                        <h2 className='tab fade-in'>Front-End</h2>
-                        <h2 className='tab fade-in'>Back-End</h2>
+                        <h2 className={front ? 'fade-in t-select equalize' : 'tab fade-in equalize'} onClick={()=> {setFront(true)}} >Front-End</h2>
+                        <h2 className={!front ? 'fade-in t-select equalize' : 'tab fade-in equalize'} onClick={()=> {setFront(false)}} >Back-End</h2>
                     </div>
                     <div id='pro-split'>
                         <div id='bg-content'>
                             {/* showcase similar to home and about */}
-                            <h3 className='tab fade-in'>Fit-Track</h3>
-                            <h3 className='tab fade-in'>Go-Bird-Go</h3>
+                            <h3 className={project === 0 ? 'fade-in select' : 'tab fade-in'} onClick={()=>{setProject(0)}}>Fit-Track</h3>
+                            <h3 className={project === 1 ? 'fade-in select' : 'tab fade-in'} onClick={()=>{setProject(1)}}>Go-Bird-Go</h3>
                         </div>
                         <div id='bg-display'>
                             <div id='pro-display'>
