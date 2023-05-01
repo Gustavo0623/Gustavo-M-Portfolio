@@ -430,6 +430,10 @@ h2 {
   align-self: center;
 }
 
+#invalid {
+  cursor: not-allowed;
+}
+
 #home-contact {
   width: 60%;
 }
