@@ -1,5 +1,6 @@
 import { useState } from "react";
 import FTDetails from "../components/FtDetails";
+import GoDetails from "../components/GoDetails";
 
 const Projects = () => {
 
@@ -27,7 +28,7 @@ const Projects = () => {
                                 { !details ? project === 0 ? <img src='./Photos/Screen Shot 2023-01-18 at 10.19.13 PM (2).jpg' alt='Selected App Screenshot' id='proj-photo' className='fade-in'/>: project === 1 ? <img src='./Photos/Screen Shot 2023-04-30 at 5.43.32 PM.png' alt='Selected App Screenshot' id='proj-photo'/> : null : null}
                                 { !details ? <button id='toggle-view' className='gap tab fade-in' onClick={()=>{setDetails(true)}}> Details </button> : <button id='toggle-view' className='tab fade-in' onClick={()=>{setDetails(false)}}> Project Photo </button>}
                                 {/* Update to include GoDetails component!!! */}
-                                { details ? <FTDetails/>: null}
+                                { details ? project === 0 ? <FTDetails/> : project === 1 ? <GoDetails/> : null : null }
                             </div>
                             <div className='separate gap fade-in'>
                                 <div className='join'>
