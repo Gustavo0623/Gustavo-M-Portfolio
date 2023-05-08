@@ -38,7 +38,7 @@ main {
 .fade-in {
   opacity: 0;
   transform: translateY(50px);
-  animation: fade-in 1s ease-out forwards;
+  animation: fade-in .5s ease-out forwards;
 }
 
 .title, .t-fast {
@@ -183,11 +183,23 @@ main {
   margin: auto;
   padding-left: 1em;
   flex: 3;
+
+  @media (max-width: 768px) {
+    flex: 2;
+  }
 }
 
 #logo-img {
   width: 235px;
   object-fit: contain;
+
+  @media (max-width: 768px) {
+    width: 200px
+  }
+
+  @media (max-width: 576px) {
+    width: 180px
+  }
 }
 
 #nav {
@@ -196,6 +208,40 @@ main {
   align-items: center;
   flex: 2;
 }
+
+.menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  #head {
+    flex-wrap: wrap;
+  }
+  .menu-icon {
+      display: flex;
+      margin-right: 1.5em;
+  }
+  #nav {
+      display: none;
+  }
+  #nav.show {
+      display: flex;
+      flex: 0 0 75%;
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+      background-color: #ffffff10;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 15px;
+  }
+
+  #nav-link {
+    width: 100px;
+    text-align: center;
+  }
+}
+
 .link, .t-title {
   text-decoration: none;
   font-weight: 600;
@@ -205,6 +251,11 @@ main {
   display: flex;
   margin: auto;
   text-align: center;
+
+  @media (max-width: 576px) {
+    /* CSS styles for extra small devices */
+    font-size: 14px
+  }
 }
 
 .link {
@@ -217,7 +268,7 @@ main {
 
 /* Home */
 
-#intro, #proj-home, #quick-links, #w-status {
+#intro, #intro-xp, #proj-home, #quick-links, #w-status {
   width: 100%;
   height: 100%;
   margin-top: 120px;
@@ -230,12 +281,17 @@ main {
 
 #intro {
   width: 60%;
-  margin: auto;
-  margin-top: 0px;
-  padding: 120px 1em 0 1em;
+  margin: 120px auto 0 auto;
+  padding: 0 1em;
 }
 
-#intro, #otw, #proj-home, #home-contact, .blur{
+#intro-xp {
+  width: 60%;
+  margin: 220px auto 0 auto;
+  padding: 0 1em;
+}
+
+#intro, #intro-xp, #otw, #proj-home, #home-contact, .blur{
   background-color: #ffffff10;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -263,17 +319,30 @@ main {
   align-items: stretch;
 }
 
+.split {
+  flex-wrap: wrap-reverse;
+  gap: 2em;
+}
+
 #showcase {
   margin-top: 1.5em;
+  flex-wrap: wrap;
+  gap: 2em;
 }
+
 
 h1, h2 {
   margin-top: 0;
   align-self: left;
   text-align: left;
+
+  @media (max-width: 576px) {
+    /* CSS styles for extra small devices */
+    font-size: 18px
+  }
 }
 
-#proj-home > h2, #intro > h1 {
+#proj-home > h2, #intro > h1, #intro-xp > h1 {
   width: 100%;
 }
 
@@ -294,7 +363,28 @@ h2 {
 
 #portrait {
   width: 250px;
+  margin: auto;
   animation: warp 5s linear infinite, color-change 10s ease-in-out infinite, bg-color-change 10s ease-in-out infinite;
+
+  @media (max-width: 768px) {
+    /* CSS styles for large devices */
+    width: 220px;
+  }
+
+  @media (max-width: 576px) {
+    /* CSS styles for extra small devices */
+    width: 190px
+  }
+  
+}
+
+.info {
+  flex: 1 0 250px;
+
+  @media (max-width: 934px) {
+    /* CSS styles for large devices */
+    flex: 1 0 100%
+  }
 }
 
 #portrait, #proj-home {
@@ -338,6 +428,11 @@ h2 {
 
 .msg, .proj, .description {
   line-height: 2em;
+
+  @media (max-width: 576px) {
+    /* CSS styles for extra small devices */
+    font-size: 12px
+  }
 }
 
 #title {
@@ -402,10 +497,15 @@ h2 {
 
 /* project highlight */
 .left-show {
-  width: 25%;
+  flex: 0 0 120px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (max-width: 934px) {
+    /* CSS styles for large devices */
+    flex: 1 0 120px
+  }
 }
 
 #display, .about, .blur {
@@ -414,6 +514,15 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
   margin: auto;
+}
+
+#display {
+  flex: .5 0 400px;
+
+  @media (max-width: 565px) {
+    /* CSS styles for extra small devices */
+    flex: 1 0 200px
+  }
 }
 
 .separate {
@@ -445,13 +554,40 @@ h2 {
 
 #sep-contact {
   justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (max-width: 934px) {
+    justify-content: flex-start;
+    gap: 1em;
+  }
+}
+
+#sep-contact > .half {
+  flex: 0 0 184px;
+}
+
+#sep-contact > .h-contact {
+  flex: .33 0 120px;
+
+  @media (max-width: 934px) {
+    /* CSS styles for large devices */
+    text-align: left;
+    flex: 0 0 184px
+  }
 }
 
 #selector {
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 2em
+  gap: 2em;
+
+  @media (max-width: 934px) {
+    /* CSS styles for large devices */
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
 }
 
 #proj-photo {
@@ -459,6 +595,12 @@ h2 {
   object-fit: contain;
   flex: 3;
   border-radius: 7.5px;
+}
+
+#intro, #intro-xp, #otw, #proj-home, #home-contact {
+  @media (max-width: 768px) {
+    width: 75%;
+  }
 }
 
 /* About */

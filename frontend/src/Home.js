@@ -1,6 +1,9 @@
-import React, {useState} from 'react'
+import React, { useState, useContext } from 'react'
+import { NavContext } from './App';
 
 const Home = () => {
+
+    const { navState } = useContext(NavContext);
 
     const [isHovering, setIsHovering] = useState(false);
     const [s1, setS1] = useState(false);
@@ -22,7 +25,7 @@ const Home = () => {
     return (
         <main data-speed='1'>
             <div className='scroll'>
-                <div id='intro' className='fade-in'>
+                <div id={navState ? 'intro-xp' : 'intro'} className='fade-in'>
                     <div id='title'>
                         <h1 className='title fade-in'> Full Stack Software Developer </h1>
                     </div>
@@ -91,7 +94,7 @@ const Home = () => {
                         </div>
                         <div id='display' className='fade-in'>
                             {/* placeholder... replace later */}
-                            {project === 0 ? <img src='./Photos/Screen Shot 2023-01-18 at 10.19.13 PM (2).jpg' alt='Selected App Screenshot' id='proj-photo'/> : project === 1 ? <img src='./Photos/Screen Shot 2023-04-30 at 5.43.32 PM.png' alt='Selected App Screenshot' id='proj-photo'/> : null }
+                            {project === 0 ? <img src='./Photos/Screen Shot 2023-01-18 at 10.19.13 PM (2).jpg' alt='Selected App Screenshot' id='proj-photo' className='fade-in'/> : project === 1 ? <img src='./Photos/Screen Shot 2023-04-30 at 5.43.32 PM.png' alt='Selected App Screenshot' id='proj-photo'/> : null }
                             
                             <div className='separate gap fade-in'>
                                 <div className='join'>

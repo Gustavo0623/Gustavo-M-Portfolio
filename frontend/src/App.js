@@ -1,4 +1,4 @@
-import { React , useEffect } from 'react';
+import { React , createContext, useEffect, useState} from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './Home';
@@ -9,8 +9,11 @@ import Contact from './places/Contact';
 import Projects from './places/Projects';
 import Resume from './places/Resume';
 
+export const NavContext = createContext();
 
 function App() {
+
+  const [navState, setNavState] = useState(false);
 
   // to set scroll background behavior
   useEffect(() => {
@@ -24,17 +27,19 @@ function App() {
 
 
   return (
-    <BrowserRouter>
-      <Navigation/>
-      <Routes>
-        <Route exact path='/' element={ <Home/> }></Route>
-        <Route exact path='/about' element={ <About/> }></Route>
-        <Route exact path='/contact' element={ <Contact/> }></Route>
-        <Route exact path='/projects' element={ <Projects/> }></Route>
-        <Route exact path='/resume' element={ <Resume/> }></Route>
-        <Route path='/*' element={ <Error404/> }></Route>
-      </Routes>
-    </BrowserRouter>
+    <NavContext.Provider value={{ navState, setNavState }}>
+      <BrowserRouter>
+        <Navigation/>
+        <Routes>
+          <Route exact path='/' element={ <Home/> }></Route>
+          <Route exact path='/about' element={ <About/> }></Route>
+          <Route exact path='/contact' element={ <Contact/> }></Route>
+          <Route exact path='/projects' element={ <Projects/> }></Route>
+          <Route exact path='/resume' element={ <Resume/> }></Route>
+          <Route path='/*' element={ <Error404/> }></Route>
+        </Routes>
+      </BrowserRouter>
+    </NavContext.Provider>
   );
 }
 
