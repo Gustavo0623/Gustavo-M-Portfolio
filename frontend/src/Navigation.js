@@ -6,31 +6,31 @@ const Navigation = () => {
     const { setNavState } = useContext(NavContext);
     const [isHovering, setIsHovering] = useState(false);
     const [showNav, setShowNav] = useState(false);
+    const [isActive, setIsActive] = useState(false);
 
-    const handleMouseEnter = () => {
+    const handleMouseClick = () => {
         setIsHovering(true);
-    };
-
-    const handleMouseLeave = () => {
-        setIsHovering(false);
     };
 
     const handleMenuClick = () => {
         setNavState(prevState => !prevState);
         setShowNav(!showNav);
+        setIsActive(!isActive);
     };
     
     return (
         <header id='head'>
             <div id='logo'>
-                <img src='./Photos/logo.PNG' alt='Gustavo logo' id='logo-img' className={isHovering ? 'l-spin' : ''} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}/>
+                <img src='./Photos/logo.PNG' alt='Gustavo logo' id='logo-img' className={isHovering ? 'l-spin' : ''} onClick={handleMouseClick}/>
             </div>
-            <button className="menu-icon" onClick={handleMenuClick}>Menu</button>
+            <button className={`menu-icon ${isActive ? "active" : ""}`} onClick={handleMenuClick}>
+                <span className="menu-img"></span>
+            </button>
             <nav id='nav' className={showNav ? 'show' : ''}>
-                <a id='nav-link' className='link tab' href='/' >Home</a>
-                <a id='nav-link' className='link tab' href='/about'>About</a>
-                <a id='nav-link' className='link tab' href='/projects'>Projects</a>
-                <a id='nav-link' className='link tab' href='/contact'>Contact</a>
+                <a className='nav-link link tab' href='/' >Home</a>
+                <a className='nav-link link tab' href='/about'>About</a>
+                <a className='nav-link link tab' href='/projects'>Projects</a>
+                <a className='nav-link link tab' href='/contact'>Contact</a>
             </nav>
         </header>
     );

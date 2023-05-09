@@ -27,14 +27,17 @@ function ContactForm() {
 
             <div id='form-split'>
                 <div id='user-info'>
-                    <label htmlFor="name" className='fade-in'>Name</label>
-                    <input type="text" id="name" name="user_name" className='fade-in' value={user_name} onChange={(event) => setName(event.target.value)} required />
-
-                    <label htmlFor="email" className='fade-in'>Email</label>
-                    <input type="email" id="email" className='fade-in' name="user_email" value={user_email} onChange={(event) => setEmail(event.target.value)} required />
+                    <div className='input'>
+                        <label htmlFor="name" className='msg fade-in'>Name</label>
+                        <input type="text" id="name" name="user_name" className='fade-in' value={user_name} onChange={(event) => setName(event.target.value)} required />
+                    </div>
+                    <div className='input'>
+                        <label htmlFor="email" className='msg fade-in'>Email</label>
+                        <input type="email" id="email" className='fade-in' name="user_email" value={user_email} onChange={(event) => setEmail(event.target.value)} required />
+                    </div>
                 </div>
                 <div id='msg-content'>
-                    <label htmlFor="message" className='fade-in'>Message</label>
+                    <label htmlFor="message" className='msg fade-in'>Message</label>
                     <textarea id="message" className='fade-in' name="message" rows="5" value={message} onChange={(event) => setMessage(event.target.value)} required></textarea>
                 </div>
             </div>

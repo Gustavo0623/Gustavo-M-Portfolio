@@ -38,7 +38,7 @@ main {
 .fade-in {
   opacity: 0;
   transform: translateY(50px);
-  animation: fade-in .5s ease-out forwards;
+  animation: fade-in .25s ease-out forwards;
 }
 
 .title, .t-fast {
@@ -76,7 +76,7 @@ main {
 @keyframes fade-in {
   from {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(25px);
   }
   to {
     opacity: 1;
@@ -98,6 +98,14 @@ main {
 
 .fade-in:nth-child(5) {
   animation-delay: 0.8s;
+}
+
+.fade-in:nth-child(6) {
+  animation-delay: 1s;
+}
+
+.fade-in:nth-child(7) {
+  animation-delay: 1.2s;
 }
 
 @keyframes scale-small {
@@ -211,7 +219,75 @@ main {
 
 .menu-icon {
   display: none;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
+
+.menu-img {
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: auto;
+  background-color: black;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.menu-icon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+
+  @media (max-width: 438px) {
+    /* CSS styles for extra small devices */
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, bottom 0.3s ease-in-out;
+}
+
+.menu-icon::before {
+  top: 2.5px;
+
+  @media (max-width: 438px) {
+    /* CSS styles for extra small devices */
+    top: 2px;
+  }
+}
+
+.menu-icon::after {
+  bottom: 2.5px;
+
+  @media (max-width: 438px) {
+    /* CSS styles for extra small devices */
+    bottom: 2px;
+  }
+}
+
+.menu-icon.active::before {
+  transform: rotate(45deg);
+}
+
+.menu-icon.active .menu-img {
+  opacity: 0;
+}
+
+.menu-icon.active::after {
+  transform: rotate(-45deg);
+}
+
 
 @media screen and (max-width: 768px) {
   #head {
@@ -236,9 +312,14 @@ main {
       border-radius: 15px;
   }
 
-  #nav-link {
+  .nav-link {
     width: 100px;
     text-align: center;
+
+    @media (max-width: 576px) {
+      /* CSS styles for extra small devices */
+      font-size: 14px
+    }
   }
 }
 
@@ -287,7 +368,7 @@ main {
 
 #intro-xp {
   width: 60%;
-  margin: 220px auto 0 auto;
+  margin: 196px auto 0 auto;
   padding: 0 1em;
 }
 
@@ -373,7 +454,7 @@ h2 {
 
   @media (max-width: 576px) {
     /* CSS styles for extra small devices */
-    width: 190px
+    width: 150px
   }
   
 }
@@ -426,7 +507,7 @@ h2 {
   margin: 0%;
 }
 
-.msg, .proj, .description {
+.msg, .proj, .description, .list-item {
   line-height: 2em;
 
   @media (max-width: 576px) {
@@ -454,6 +535,10 @@ h2 {
 
 .icon {
   width: 40px;
+
+  @media (max-width: 576px) {
+    width: 30px;
+  }
 }
 
 #t-stack > .stack-group > .icon {
@@ -485,6 +570,12 @@ h2 {
 
 #t-stack {
   width: 80%;
+  margin-top: 1em;
+
+  @media (max-width: 565px) {
+    /* CSS styles for extra small devices */
+    width: 100%;
+  }
 }
 
 .stack-group {
@@ -504,7 +595,7 @@ h2 {
 
   @media (max-width: 934px) {
     /* CSS styles for large devices */
-    flex: 1 0 120px
+    flex: 1 0 200px
   }
 }
 
@@ -588,6 +679,16 @@ h2 {
     width: 100%;
     justify-content: space-between;
   }
+
+  @media (max-width: 565px) {
+    /* CSS styles for large devices */
+    flex-direction: column;
+    width: 100px;
+    gap: 1em;
+    margin: auto;
+    text-align: center;
+  }
+
 }
 
 #proj-photo {
@@ -597,7 +698,7 @@ h2 {
   border-radius: 7.5px;
 }
 
-#intro, #intro-xp, #otw, #proj-home, #home-contact {
+#intro, #intro-xp, #otw, #proj-home, #home-contact, .pad, .pad-xp {
   @media (max-width: 768px) {
     width: 75%;
   }
@@ -615,6 +716,10 @@ h2 {
   margin-top: 120px;
 }
 
+.pad-xp {
+  margin-top: 196px;
+}
+
 .bottom {
   margin-bottom: 100px;
 }
@@ -624,11 +729,16 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 #bg-split {
   align-items: stretch;
   margin-top: 1em;
+  gap: 1em;
 }
 
 #bg-content {
@@ -636,6 +746,12 @@ h2 {
   flex-direction: column;
   width: 25%;
   gap: 2em;
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+  }
 }
 
 
@@ -645,15 +761,60 @@ h2 {
   justify-content: center;
   align-items: center;
   width: 70%;
+
+  @media (max-width: 768px) {
+    width: 100%
+  }
 }
 
 #bg-display > .stack-group {
   justify-content: space-between;
   margin-top: 0%;
+  gap: 1em;
+
+  @media (max-width: 768px) {
+    /* CSS styles for extra small devices */
+    flex-direction: column;
+  }
 }
 
-.milestone > strong, #bg-content > h3 {
+#bg-content > h3 {
   cursor: pointer;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    /* CSS styles for extra small devices */
+    width: 80px;
+    text-align: center;
+  }
+}
+
+.p-c, .milestone {
+
+  @media (max-width: 768px) {
+    /* CSS styles for extra small devices */
+    text-align: center;
+    width: 45%;
+  }
+
+  @media (max-width: 438px) {
+    /* CSS styles for extra small devices */
+    text-align: center;
+    width: 65%;
+  }
+
+  @media (max-width: 320px) {
+    /* CSS styles for extra small devices */
+    text-align: center;
+    width: 75%;
+  }
+}
+
+#s-e, #i-c, #hs, #asd, #pc {
+  @media (max-width: 768px) {
+    /* CSS styles for extra small devices */
+    width: 100%;
+  }
 }
 
 h3 {
@@ -672,6 +833,29 @@ h3 {
 #pro-split {
   margin-top: 1.5em;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    /* CSS styles for extra small devices */
+    gap: 2em;
+    align-items: center
+  }
+}
+
+#pro-split > #bg-content {
+  @media (max-width: 768px) {
+    /* CSS styles for extra small devices */
+    gap: 0;
+  }
+}
+
+#pro-split > #bg-content > h3 {
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    /* CSS styles for extra small devices */
+    width: 100px;
+    text-align: center;
+  }
 }
 
 .tab, .select, .t-select {
@@ -683,8 +867,12 @@ h3 {
 }
 
 .equalize {
-  width: 25%;
+  width: 120px;
   text-align: center;
+  @media (max-width: 768px) {
+    /* CSS styles for extra small devices */
+    font-size: 16px;
+  }
 }
 
 .select::before, .t-select::before {
@@ -772,9 +960,7 @@ h3 {
   flex-direction: column;
   gap: .5em;
   margin-top: 0em;
-}
-.list-item {
-  line-height: 2em;
+  padding-left: 1em;
 }
 
 .gap {
@@ -794,8 +980,13 @@ h3 {
   width: 100%;
 }
 
-#drop {
+.drop, #toggle-view {
   line-height: 2em;
+
+  @media (max-width: 576px) {
+    /* CSS styles for extra small devices */
+    font-size: 14px
+  }
 }
 
 #msg-form > button {
@@ -807,8 +998,9 @@ h3 {
   line-height: 2em;
   flex-basis: 100%;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-between;
+  gap: 2em;
 }
 
 #user-info, #msg-content {
@@ -818,20 +1010,48 @@ h3 {
 }
 
 #user-info {
-  flex-basis: 35%;
+  flex: 1 0 200px;
+
+  @media (max-width: 768px) {
+    /* CSS styles for extra small devices */
+    flex: 1 0 280px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+
+  @media (max-width: 565px) {
+    /* CSS styles for extra small devices */
+    flex: 1 0 200px;
+  }
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 768px) {
+    /* CSS styles for extra small devices */
+    flex: 1 0 205px;
+  }
 }
 
 #msg-content {
-  flex-basis: 50%;
-  height: 100%;
+  flex: 1 0 200px;
+
+  @media (max-width: 768px) {
+    /* CSS styles for extra small devices */
+    flex: 1 0 280px;
+  }
+
+  @media (max-width: 565px) {
+    /* CSS styles for extra small devices */
+    flex: 1 0 200px;
+  }
 }
 
 input {
   height: 1.5em;
-}
-
-textarea {
-  height: 100%;
 }
 
 #socials > .stack-group {

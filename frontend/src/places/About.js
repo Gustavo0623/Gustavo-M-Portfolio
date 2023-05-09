@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Education from "../components/Education";
 import Work from "../components/Work";
+import { NavContext } from '../App';
 
 const About = () => {
 
+    const { navState } = useContext(NavContext);
     const [edu, setEdu] = useState(true)
 
     return (
         <main data-speed='1'>
             <div className='about fade-in'>
-                <div className='blur pad'>
+                <div className={navState ? 'blur pad-xp' : 'blur pad'}>
                     <h1 className='fade-in title'>Who Is Gustavo Martinez?</h1>
                     {/* potential showcase styling similar to home projects, to keep styling consistent */}
                     <h2 id='drop' className='fade-in title'>My Mission</h2>
@@ -26,8 +28,8 @@ const About = () => {
                     <h2 className='fade-in title'>Background</h2>
                     <div id='bg-split'>
                         <div id='bg-content'>
-                            <h3 className={edu ? 'fade-in select' : 'tab fade-in'} onClick={()=>{setEdu(true)}}>Education</h3>
-                            <h3 className={!edu ? 'fade-in select' : 'tab fade-in'} onClick={()=>{setEdu(false)}}>Work</h3>
+                            <h3 className={edu ? 'fade-in select t-title' : 'tab fade-in t-title'} onClick={()=>{setEdu(true)}}>Education</h3>
+                            <h3 className={!edu ? 'fade-in select t-title' : 'tab fade-in t-title'} onClick={()=>{setEdu(false)}}>Work</h3>
                         </div>
                         {/* content component to be displayed here conditionally depending on click */}
                         {edu ? <Education/> : <Work/> }

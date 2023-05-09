@@ -14,13 +14,22 @@ const Home = () => {
     const [project, setProject] = useState(0)
 
 
-    const handleMouseEnter = () => {
+    const handleMouseClick = () => {
         setIsHovering(true);
     };
 
-    const handleMouseLeave = () => {
-        setIsHovering(false);
-    };
+    const resetStates = () => {
+        isHovering ? setIsHovering(false) :
+        s1 ? setS1(false) :
+        s2 ? setS2(false) :
+        s3 ? setS3(false) :
+        setS4(false) 
+    }
+
+    const delayReset = setTimeout(() => {
+        clearTimeout(delayReset)
+        resetStates()
+    }, 5000)
 
     return (
         <main data-speed='1'>
@@ -56,11 +65,11 @@ const Home = () => {
                     <div id='t-stack'>
                         <p className='t-title title fade-in'> Tech Stack </p>
                         <div className='stack-group fade-in'>
-                            <img src='./Photos/icons8-html-5-is-a-software-solution-stack-that-defines-the-properties-and-behaviors-of-web-page-48.png' alt='HTML5 logo' className={isHovering ? 'spin icon shrink' : 'icon shrink'} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}/>
-                            <img src='./Photos/icons8-cascading-style-sheets-language-used-for-describing-the-presentation-of-a-document-48.png' alt='CSS3 logo' className={s1 ? 's-1 icon shrink' : 'icon shrink'} onMouseEnter={()=> {setS1(true)}} onMouseLeave={()=> {setS1(false)}}/>
-                            <img src='./Photos/icons8-javascript-48.png' alt='javascript logo' className={s2 ? 's-2 icon' : 'icon'} onMouseEnter={()=> {setS2(true)}} onMouseLeave={()=> {setS2(false)}}/>
-                            <img src='./Photos/icons8-react-100.png' alt='React logo' className={s3 ? 's-3 icon' : 'icon'} onMouseEnter={()=> {setS3(true)}} onMouseLeave={()=> {setS3(false)}}/>
-                            <img src='./Photos/icons8-sql-64.png' alt='SQL logo' className={s4 ? 's-4 icon i-grow' : 'icon i-grow'} onMouseEnter={()=> {setS4(true)}} onMouseLeave={()=> {setS4(false)}}/>
+                            <img src='./Photos/icons8-html-5-is-a-software-solution-stack-that-defines-the-properties-and-behaviors-of-web-page-48.png' alt='HTML5 logo' className={isHovering ? 'spin icon shrink' : 'icon shrink'} onClick={()=>{resetStates(); handleMouseClick()}}/>
+                            <img src='./Photos/icons8-cascading-style-sheets-language-used-for-describing-the-presentation-of-a-document-48.png' alt='CSS3 logo' className={s1 ? 's-1 icon shrink' : 'icon shrink'} onClick={()=> {resetStates(); setS1(true)}} />
+                            <img src='./Photos/icons8-javascript-48.png' alt='javascript logo' className={s2 ? 's-2 icon' : 'icon'} onClick={()=> {resetStates(); setS2(true)}}/>
+                            <img src='./Photos/icons8-react-100.png' alt='React logo' className={s3 ? 's-3 icon' : 'icon'} onClick={()=> {resetStates(); setS3(true)}}/>
+                            <img src='./Photos/icons8-sql-64.png' alt='SQL logo' className={s4 ? 's-4 icon i-grow' : 'icon i-grow'} onClick={()=> {resetStates(); setS4(true)}}/>
                         </div>
                         <p id='value' className={isHovering | s1 | s2 | s3 | s4 ? 't-title t-fast msg' : ''}> { isHovering ? 'HTML5' : s1 ? 'CSS3' : s2 ? 'Javascript' : s3 ? 'React.js' : s4 ? 'SQL' : '' }</p>
                     </div>

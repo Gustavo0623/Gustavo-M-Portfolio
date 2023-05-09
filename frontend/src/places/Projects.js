@@ -1,9 +1,11 @@
-import { useState } from "react";
+import React, { useState, useContext } from "react";
 import FTDetails from "../components/FtDetails";
 import GoDetails from "../components/GoDetails";
+import { NavContext } from '../App';
 
 const Projects = () => {
 
+    const { navState } = useContext(NavContext);
     const [details, setDetails] = useState(false)
     const [front, setFront] = useState(true)
     const [project, setProject] = useState(0)
@@ -11,7 +13,7 @@ const Projects = () => {
     return (
         <main data-speed='1'>
             <div className='about fade-in'>
-                <div className='blur pad bottom'>
+                <div className={navState ? 'blur pad-xp bottom' : 'blur pad bottom'}>
                     <h1 className='fade-in title'>A Glimpse Of What Is Possible</h1>
                     <div id='pro-tabs'>
                         <h2 className={front ? 'fade-in t-select equalize' : 'tab fade-in equalize'} onClick={()=> {setFront(true)}} >Front-End</h2>
@@ -20,8 +22,8 @@ const Projects = () => {
                     <div id='pro-split'>
                         <div id='bg-content'>
                             {/* showcase similar to home and about */}
-                            <h3 className={project === 0 ? 'fade-in select' : 'tab fade-in'} onClick={()=>{setProject(0)}}>Fit-Track</h3>
-                            <h3 className={project === 1 ? 'fade-in select' : 'tab fade-in'} onClick={()=>{setProject(1)}}>Go-Bird-Go</h3>
+                            <h3 className={project === 0 ? 'drop fade-in select' : 'drop tab fade-in'} onClick={()=>{setProject(0)}}>Fit-Track</h3>
+                            <h3 className={project === 1 ? 'drop fade-in select' : 'drop tab fade-in'} onClick={()=>{setProject(1)}}>Go-Bird-Go</h3>
                         </div>
                         <div id='bg-display'>
                             <div id='pro-display'>
@@ -39,7 +41,7 @@ const Projects = () => {
                                     { project === 0 ? <a href='https://fittrack-frontend.herokuapp.com/' className='link tab'>Live Demo</a> : project === 1 ? <p className='select' id='invalid'>Demo Coming Soon!</p> : null}
                                 </div>
                             </div>
-                            <p id='pro-link' className='fade-in'> 
+                            <p id='pro-link' className='msg fade-in'> 
                                 Like what you see?
                                 <br/> 
                                 <a href='/contact' className='link tab fade-in'> Contact Me!</a>
