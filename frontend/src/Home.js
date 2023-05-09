@@ -10,7 +10,6 @@ const Home = () => {
     const [s2, setS2] = useState(false);
     const [s3, setS3] = useState(false);
     const [s4, setS4] = useState(false);
-
     const [project, setProject] = useState(0)
 
 
@@ -118,7 +117,7 @@ const Home = () => {
                     </div>
                 </div>
                 {/* quick links */}
-                <div id='quick-links' className=''>
+                <div id='quick-links'>
                     <div id='home-contact'>
                         <h2 className='title fade-in'> Contact </h2>
                         <p className='msg fade-in'>I'm just a click away. Let's connect!</p>
