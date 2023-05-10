@@ -191,23 +191,11 @@ main {
   margin: auto;
   padding-left: 1em;
   flex: 3;
-
-  @media (max-width: 768px) {
-    flex: 2;
-  }
 }
 
 #logo-img {
   width: 235px;
   object-fit: contain;
-
-  @media (max-width: 768px) {
-    width: 200px
-  }
-
-  @media (max-width: 576px) {
-    width: 180px
-  }
 }
 
 #nav {
@@ -239,12 +227,6 @@ main {
   height: 20px;
   position: relative;
   cursor: pointer;
-
-  @media (max-width: 438px) {
-    /* CSS styles for extra small devices */
-    width: 18px;
-    height: 18px;
-  }
 }
 
 .menu-icon::before,
@@ -289,11 +271,6 @@ main {
   display: flex;
   margin: auto;
   text-align: center;
-
-  @media (max-width: 576px) {
-    /* CSS styles for extra small devices */
-    font-size: 14px
-  }
 }
 
 .link {
@@ -370,18 +347,6 @@ main {
   margin-top: 1.5em;
   flex-wrap: wrap;
   gap: 2em;
-
-
-  @media (max-width: 934px) {
-    /* CSS styles for extra small devices */
-    flex-direction: column;
-  }
-
-  @media (max-width: 576px) {
-    /* CSS styles for extra small devices */
-    flex-direction: column;
-    gap: 1em;
-  }
 }
 
 
@@ -389,11 +354,6 @@ h1, h2 {
   margin-top: 0;
   align-self: left;
   text-align: left;
-
-  @media (max-width: 576px) {
-    /* CSS styles for extra small devices */
-    font-size: 18px
-  }
 }
 
 #proj-home > h2, #intro > h1, #intro-xp > h1 {
@@ -418,27 +378,11 @@ h2 {
 #portrait {
   width: 250px;
   margin: auto;
-  animation: warp 5s linear infinite, color-change 10s ease-in-out infinite, bg-color-change 10s ease-in-out infinite;
-
-  @media (max-width: 768px) {
-    /* CSS styles for large devices */
-    width: 220px;
-  }
-
-  @media (max-width: 576px) {
-    /* CSS styles for extra small devices */
-    width: 150px
-  }
-  
+  animation: warp 5s linear infinite, color-change 10s ease-in-out infinite, bg-color-change 10s ease-in-out infinite;  
 }
 
 .info {
   flex: 1 0 250px;
-
-  @media (max-width: 934px) {
-    /* CSS styles for large devices */
-    flex: 1 0 100%
-  }
 }
 
 #portrait, #proj-home {
@@ -481,11 +425,6 @@ h2 {
 
 .msg, .proj, .description, .list-item {
   line-height: 2em;
-
-  @media (max-width: 576px) {
-    /* CSS styles for extra small devices */
-    font-size: 12px
-  }
 }
 
 #title {
@@ -507,10 +446,6 @@ h2 {
 
 .icon {
   width: 40px;
-
-  @media (max-width: 576px) {
-    width: 30px;
-  }
 }
 
 #t-stack > .stack-group > .icon {
@@ -550,11 +485,6 @@ h2 {
 #t-stack {
   width: 80%;
   margin-top: 1em;
-
-  @media (max-width: 565px) {
-    /* CSS styles for extra small devices */
-    width: 100%;
-  }
 }
 
 .stack-group {
@@ -570,22 +500,6 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  @media (max-width: 934px) {
-    /* CSS styles for large devices */
-    width: 100%;
-    margin: auto;
-  }
-
-  @media (max-width: 565px) {
-    /* CSS styles for extra small devices */
-    width: 40%;
-  }
-
-  @media (max-width: 420px) {
-    /* CSS styles for large devices */
-    width: 50%
-  }
 }
 
 #display, .about, .blur {
@@ -598,12 +512,6 @@ h2 {
 
 #display {
   flex: .5 0 400px;
-
-  @media (max-width: 934px) {
-    /* CSS styles for extra small devices */
-    width: 100%;
-    flex: 1 0 100px;
-  }
 }
 
 .separate {
@@ -636,11 +544,6 @@ h2 {
 #sep-contact {
   justify-content: space-between;
   flex-wrap: wrap;
-
-  @media (max-width: 934px) {
-    justify-content: flex-start;
-    gap: 1em;
-  }
 }
 
 #sep-contact > .half {
@@ -649,12 +552,6 @@ h2 {
 
 #sep-contact > .h-contact {
   flex: .33 0 120px;
-
-  @media (max-width: 934px) {
-    /* CSS styles for large devices */
-    text-align: left;
-    flex: 0 0 184px
-  }
 }
 
 #selector {
@@ -662,23 +559,7 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 2em;
-
-  @media (max-width: 934px) {
-    /* CSS styles for large devices */
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  @media (max-width: 565px) {
-    /* CSS styles for large devices */
-    flex-direction: column;
-    flex: 0 0 100%;
-    gap: 1em;
-    margin: auto;
-    text-align: center;
-  }
-
+  margin: auto;
 }
 
 #proj-photo {
@@ -713,10 +594,6 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
 }
 
 #bg-split {
@@ -730,12 +607,6 @@ h2 {
   flex-direction: column;
   width: 25%;
   gap: 2em;
-
-  @media (max-width: 768px) {
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-around;
-  }
 }
 
 
@@ -745,60 +616,21 @@ h2 {
   justify-content: center;
   align-items: center;
   width: 70%;
-
-  @media (max-width: 768px) {
-    width: 100%
-  }
 }
 
 #bg-display > .stack-group {
   justify-content: space-between;
   margin-top: 0%;
   gap: 1em;
-
-  @media (max-width: 768px) {
-    /* CSS styles for extra small devices */
-    flex-direction: column;
-  }
 }
 
 #bg-content > h3 {
   cursor: pointer;
   text-align: center;
-
-  @media (max-width: 768px) {
-    /* CSS styles for extra small devices */
-    width: 80px;
-    text-align: center;
-  }
 }
 
 .p-c, .milestone {
-
-  @media (max-width: 768px) {
-    /* CSS styles for extra small devices */
-    text-align: center;
-    width: 45%;
-  }
-
-  @media (max-width: 438px) {
-    /* CSS styles for extra small devices */
-    text-align: center;
-    width: 65%;
-  }
-
-  @media (max-width: 320px) {
-    /* CSS styles for extra small devices */
-    text-align: center;
-    width: 75%;
-  }
-}
-
-#s-e, #i-c, #hs, #asd, #pc {
-  @media (max-width: 768px) {
-    /* CSS styles for extra small devices */
-    width: 100%;
-  }
+  text-align: center;
 }
 
 h3 {
@@ -817,29 +649,10 @@ h3 {
 #pro-split {
   margin-top: 1.5em;
   justify-content: space-between;
-
-  @media (max-width: 768px) {
-    /* CSS styles for extra small devices */
-    gap: 2em;
-    align-items: center
-  }
-}
-
-#pro-split > #bg-content {
-  @media (max-width: 768px) {
-    /* CSS styles for extra small devices */
-    gap: 0;
-  }
 }
 
 #pro-split > #bg-content > h3 {
   cursor: pointer;
-
-  @media (max-width: 768px) {
-    /* CSS styles for extra small devices */
-    width: 100px;
-    text-align: center;
-  }
 }
 
 .tab, .select, .t-select {
@@ -853,10 +666,6 @@ h3 {
 .equalize {
   width: 120px;
   text-align: center;
-  @media (max-width: 768px) {
-    /* CSS styles for extra small devices */
-    font-size: 16px;
-  }
 }
 
 .select::before, .t-select::before {
@@ -966,11 +775,6 @@ h3 {
 
 .drop, #toggle-view {
   line-height: 2em;
-
-  @media (max-width: 576px) {
-    /* CSS styles for extra small devices */
-    font-size: 14px
-  }
 }
 
 #msg-form > button {
@@ -995,43 +799,15 @@ h3 {
 
 #user-info {
   flex: 1 0 200px;
-
-  @media (max-width: 768px) {
-    /* CSS styles for extra small devices */
-    flex: 1 0 280px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1em;
-  }
-
-  @media (max-width: 565px) {
-    /* CSS styles for extra small devices */
-    flex: 1 0 200px;
-  }
 }
 
 .input {
   display: flex;
   flex-direction: column;
-
-  @media (max-width: 768px) {
-    /* CSS styles for extra small devices */
-    flex: 1 0 205px;
-  }
 }
 
 #msg-content {
   flex: 1 0 200px;
-
-  @media (max-width: 768px) {
-    /* CSS styles for extra small devices */
-    flex: 1 0 280px;
-  }
-
-  @media (max-width: 565px) {
-    /* CSS styles for extra small devices */
-    flex: 1 0 200px;
-  }
 }
 
 input {
@@ -1042,17 +818,126 @@ input {
   justify-content: space-between;
 }
 
+@media screen and (max-width: 934px) {
+
+  #selector {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  #sep-contact > .h-contact {
+    text-align: left;
+    flex: 0 0 184px;
+  }
+
+  #sep-contact {
+    justify-content: flex-start;
+    gap: 1em;
+  }
+
+  #display {
+    width: 100%;
+    flex: 1 0 100px;
+  }
+
+  .left-show {
+    width: 100%;
+    margin: auto;
+  }
+
+  .info {
+    flex: 1 0 100%;
+  }
+
+  #showcase {
+    flex-direction: column;
+  }
+} 
+
 @media screen and (max-width: 768px) {
+
+  #msg-content {
+    flex: 1 0 280px;
+  }
+
+  .input {
+    flex: 1 0 205px;
+  }
+
+  #user-info {
+    flex: 1 0 280px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+
+  .equalize {
+    font-size: 16px;
+  }
+
+  #pro-split > #bg-content > h3 {
+    width: 100px;
+    text-align: center;
+  }
+
+  #pro-split > #bg-content {
+    gap: 0;
+  }
+
+  #pro-split {
+    gap: 2em;
+    align-items: center;
+  }
+
+  #s-e, #i-c, #hs, #asd, #pc {
+    width: 100%;
+  }
+
+  .p-c, .milestone {
+    width: 45%;
+  }
+
+  #bg-content > h3 {
+    width: 80px;
+    text-align: center;
+  }
+
+  #bg-display > .stack-group {
+    flex-direction: column;
+  }
+
+  #bg-display {
+    width: 100%;
+  }
+
+  #bg-content {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  #bg-split, #pro-split {
+    flex-direction: column;
+  }
+
+  #portrait {
+    width: 220px;
+  }
+
   #head {
     flex-wrap: wrap;
   }
+
   .menu-icon {
       display: flex;
       margin-right: 1.5em;
   }
+
   #nav {
       display: none;
   }
+
   #nav.show {
       display: flex;
       flex: 0 0 75%;
@@ -1068,14 +953,104 @@ input {
   .nav-link {
     width: 100px;
     text-align: center;
-
-    @media (max-width: 576px) {
-      /* CSS styles for extra small devices */
-      font-size: 14px
-    }
   }
 
   #intro, #intro-xp, #proj-home, #quick-links, #w-status {
     width: 80%;
   }
+
+  #logo {
+    flex: 2;
+  }
+
+  #logo-img {
+    width: 200px;
+  }
 }
+
+@media screen and (max-width: 576px) {
+
+  #msg-content {
+    flex: 1 0 200px;
+  }
+
+  #user-info {
+    flex: 1 0 200px;
+  }
+
+  .drop, #toggle-view {
+    font-size: 14px;
+  }
+
+  #selector {
+    flex-direction: column;
+    flex: 0 0 100%;
+    gap: 1em;
+    text-align: center;
+  }
+
+  .left-show {
+    width: 40%;
+  }
+
+  #t-stack {
+    width: 100%;
+  }
+
+  .icon {
+    width: 30px;
+  }
+
+  .msg, .proj, .description, .list-item {
+    font-size: 12px;
+  }
+
+  #portrait {
+    width: 150px;
+  }
+
+  h1, h2 {
+    font-size: 18px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+
+  #logo-img {
+    width: 170px;
+  }
+
+  .t-title {
+    font-size: 14px;
+  }
+  
+  #showcase {
+    gap: 1em;
+  }
+} 
+
+@media screen and (max-width: 438px) {
+
+  .p-c, .milestone {
+    width: 65%;
+  }
+
+  .menu-icon {
+    width: 18px;
+    height: 18px;
+  }
+} 
+
+@media screen and (max-width: 420px) {
+
+  .left-show {
+    width: 50%;
+  }
+} 
+
+@media screen and (max-width: 320px) {
+  .p-c, .milestone {
+    width: 75%;
+  }
+} 

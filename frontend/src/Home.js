@@ -35,7 +35,7 @@ const Home = () => {
             <div className='scroll'>
                 <div id={navState ? 'intro-xp' : 'intro'} className='fade-in'>
                     <div id='title'>
-                        <h1 className='title fade-in'> Full Stack Software Developer </h1>
+                        <h1 className='title fade-in'> Full Stack Software Developer Test!</h1>
                     </div>
                     <div className='split fade-in'>
                         <div className='info'>
@@ -120,7 +120,7 @@ const Home = () => {
                 <div id='quick-links'>
                     <div id='home-contact'>
                         <h2 className='title fade-in'> Contact </h2>
-                        <p className='msg fade-in'>I'm just a click away. Let's connect! Test 2</p>
+                        <p className='msg fade-in'>I'm just a click away. Let's connect!</p>
                         {/* placeholder... replace later */}
                         <div className='separate fade-in' id='sep-contact'>
                             <div className='join half'>
