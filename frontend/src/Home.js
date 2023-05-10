@@ -120,7 +120,7 @@ const Home = () => {
                 <div id='quick-links'>
                     <div id='home-contact'>
                         <h2 className='title fade-in'> Contact </h2>
-                        <p className='msg fade-in'>I'm just a click away. Let's connect! Test</p>
+                        <p className='msg fade-in'>I'm just a click away. Let's connect! Test 2</p>
                         {/* placeholder... replace later */}
                         <div className='separate fade-in' id='sep-contact'>
                             <div className='join half'>

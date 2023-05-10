@@ -280,45 +280,6 @@ main {
   transform: rotate(-45deg);
 }
 
-
-@media screen and (max-width: 768px) {
-  #head {
-    flex-wrap: wrap;
-  }
-  .menu-icon {
-      display: flex;
-      margin-right: 1.5em;
-  }
-  #nav {
-      display: none;
-  }
-  #nav.show {
-      display: flex;
-      flex: 0 0 75%;
-      flex-direction: column;
-      align-items: center;
-      margin: auto;
-      background-color: #ffffff10;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-radius: 15px;
-  }
-
-  .nav-link {
-    width: 100px;
-    text-align: center;
-
-    @media (max-width: 576px) {
-      /* CSS styles for extra small devices */
-      font-size: 14px
-    }
-  }
-
-  #intro, #intro-xp, #proj-home, #quick-links, #w-status {
-    width: 80%;
-  }
-}
-
 .link, .t-title {
   text-decoration: none;
   font-weight: 600;
@@ -1081,3 +1042,40 @@ input {
   justify-content: space-between;
 }
 
+@media screen and (max-width: 768px) {
+  #head {
+    flex-wrap: wrap;
+  }
+  .menu-icon {
+      display: flex;
+      margin-right: 1.5em;
+  }
+  #nav {
+      display: none;
+  }
+  #nav.show {
+      display: flex;
+      flex: 0 0 75%;
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+      background-color: #ffffff10;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 15px;
+  }
+
+  .nav-link {
+    width: 100px;
+    text-align: center;
+
+    @media (max-width: 576px) {
+      /* CSS styles for extra small devices */
+      font-size: 14px
+    }
+  }
+
+  #intro, #intro-xp, #proj-home, #quick-links, #w-status {
+    width: 80%;
+  }
+}
