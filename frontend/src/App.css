@@ -313,6 +313,10 @@ main {
       font-size: 14px
     }
   }
+
+  #intro, #intro-xp, #proj-home, #quick-links, #w-status {
+    width: 80%;
+  }
 }
 
 .link, .t-title {
@@ -350,16 +354,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  @media (max-width: 768px) {
-    /* CSS styles for extra small devices */
-    width: 75%;
-  }
-
-  @media (max-width: 400px) {
-    /* CSS styles for extra small devices */
-    width: 85%;
-  }
 }
 
 #w-status, #quick-links {
