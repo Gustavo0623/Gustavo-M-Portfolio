@@ -342,7 +342,7 @@ main {
 /* Home */
 
 #intro, #intro-xp, #proj-home, #quick-links, #w-status {
-  width: 100%;
+  width: 60%;
   height: 100%;
   margin-top: 120px;
   margin-bottom: 120px;
@@ -350,10 +350,19 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    /* CSS styles for extra small devices */
+    width: 75%;
+  }
+}
+
+#w-status, #quick-links {
+  margin-right: auto;
+  margin-left: auto;
 }
 
 #intro {
-  width: 60%;
   margin: 120px auto 0 auto;
   padding: 0 1em;
 }
@@ -477,7 +486,6 @@ h2 {
 }
 
 #proj-home {
-  width: 60%;
   margin: auto;
 }
 
@@ -562,10 +570,17 @@ h2 {
 }
 
 #t-stack, #otw {
-  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+#t-stack {
+  width: 60%;
+}
+
+#otw {
+  width: 100%;
 }
 
 #otw, #proj-home, #home-contact, .blur {
@@ -650,7 +665,7 @@ h2 {
 }
 
 #home-contact {
-  width: 60%;
+  width: 100%;
 }
 
 .half, .h-contact {
@@ -711,12 +726,6 @@ h2 {
   object-fit: contain;
   flex: 3;
   border-radius: 7.5px;
-}
-
-#intro, #intro-xp, #otw, #proj-home, #home-contact, .pad, .pad-xp {
-  @media (max-width: 768px) {
-    width: 75%;
-  }
 }
 
 /* About */
