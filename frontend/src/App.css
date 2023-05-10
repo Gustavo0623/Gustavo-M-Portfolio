@@ -483,7 +483,7 @@ h2 {
 }
 
 #t-stack {
-  width: 80%;
+  width: 75%;
   margin-top: 1em;
 }
 
@@ -956,7 +956,7 @@ input {
   }
 
   #intro, #intro-xp, #proj-home, #quick-links, #w-status {
-    width: 80%;
+    width: 75%;
   }
 
   #logo {
