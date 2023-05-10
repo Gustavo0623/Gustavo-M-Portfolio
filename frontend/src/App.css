@@ -259,24 +259,15 @@ main {
 }
 
 .menu-icon::before {
-  top: 2.5px;
-
-  @media (max-width: 438px) {
-    /* CSS styles for extra small devices */
-    top: 2px;
-  }
+  top: 2px;
 }
 
 .menu-icon::after {
-  bottom: 2.5px;
-
-  @media (max-width: 438px) {
-    /* CSS styles for extra small devices */
-    bottom: 2px;
-  }
+  bottom: 2px;
 }
 
 .menu-icon.active::before {
+  top: 45%;
   transform: rotate(45deg);
 }
 
@@ -285,6 +276,7 @@ main {
 }
 
 .menu-icon.active::after {
+  bottom: 45%;
   transform: rotate(-45deg);
 }
 
@@ -409,6 +401,18 @@ main {
   margin-top: 1.5em;
   flex-wrap: wrap;
   gap: 2em;
+
+
+  @media (max-width: 934px) {
+    /* CSS styles for extra small devices */
+    flex-direction: column;
+  }
+
+  @media (max-width: 576px) {
+    /* CSS styles for extra small devices */
+    flex-direction: column;
+    gap: 1em;
+  }
 }
 
 
@@ -588,19 +592,24 @@ h2 {
 
 /* project highlight */
 .left-show {
-  flex: 0 0 120px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   @media (max-width: 934px) {
     /* CSS styles for large devices */
-    flex: 1 0 200px
+    width: 100%;
+    margin: auto;
   }
 
-  @media (max-width: 320px) {
+  @media (max-width: 565px) {
+    /* CSS styles for extra small devices */
+    width: 40%;
+  }
+
+  @media (max-width: 420px) {
     /* CSS styles for large devices */
-    flex: 1 0 120px
+    width: 50%
   }
 }
 
@@ -615,16 +624,11 @@ h2 {
 #display {
   flex: .5 0 400px;
 
-  @media (max-width: 565px) {
+  @media (max-width: 934px) {
     /* CSS styles for extra small devices */
-    flex: 1 0 220px
+    width: 100%;
+    flex: 1 0 100px;
   }
-
-  @media (max-width: 320px) {
-    /* CSS styles for large devices */
-    flex: 1 0 120px
-  }
-
 }
 
 .separate {
@@ -694,7 +698,7 @@ h2 {
   @media (max-width: 565px) {
     /* CSS styles for large devices */
     flex-direction: column;
-    width: 100px;
+    flex: 0 0 100%;
     gap: 1em;
     margin: auto;
     text-align: center;
