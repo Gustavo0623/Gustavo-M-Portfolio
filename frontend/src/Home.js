@@ -58,7 +58,7 @@ const Home = () => {
                                 </a>
                             </div>
                         </div>
-                        <img id='portrait' src='./Photos/photo-output (4).PNG' alt='Portrait of Gustavo Martinez'/>
+                        <img id='portrait' src='./Photos/portrait.png' alt='Portrait of Gustavo Martinez'/>
                     </div>
 
                     <div id='t-stack'>

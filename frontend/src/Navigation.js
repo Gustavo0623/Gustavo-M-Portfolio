@@ -21,7 +21,7 @@ const Navigation = () => {
     return (
         <header id='head'>
             <div id='logo'>
-                <img src='./Photos/logo.PNG' alt='Gustavo logo' id='logo-img' className={isHovering ? 'l-spin' : ''} onClick={handleMouseClick}/>
+                <img src='./Photos/full-logo.png' alt='Gustavo logo' id='logo-img' className={isHovering ? 'l-spin' : ''} onClick={handleMouseClick}/>
             </div>
             <button className={`menu-icon ${isActive ? "active" : ""}`} onClick={handleMenuClick}>
                 <span className="menu-img"></span>
