@@ -597,6 +597,11 @@ h2 {
     /* CSS styles for large devices */
     flex: 1 0 200px
   }
+
+  @media (max-width: 320px) {
+    /* CSS styles for large devices */
+    flex: 1 0 120px
+  }
 }
 
 #display, .about, .blur {
@@ -612,8 +617,14 @@ h2 {
 
   @media (max-width: 565px) {
     /* CSS styles for extra small devices */
-    flex: 1 0 200px
+    flex: 1 0 220px
   }
+
+  @media (max-width: 320px) {
+    /* CSS styles for large devices */
+    flex: 1 0 120px
+  }
+
 }
 
 .separate {
