@@ -102,8 +102,21 @@ const Home = () => {
                         </div>
                         <div id='display' className='fade-in'>
                             {/* placeholder... replace later */}
-                            {project === 0 ? <img src='./Photos/Screen Shot 2023-01-18 at 10.19.13 PM (2).jpg' alt='Selected App Screenshot' id='proj-photo' className='fade-in'/> : project === 1 ? <img src='./Photos/Screen Shot 2023-04-30 at 5.43.32 PM.png' alt='Selected App Screenshot' id='proj-photo'/> : null }
-                            
+                            <div className='more'>
+                                {project === 0 ? <img src='./Photos/Screen Shot 2023-01-18 at 10.19.13 PM (2).jpg' alt='Selected App Screenshot' id='proj-photo' className='fade-in'/> : project === 1 ? <img src='./Photos/Screen Shot 2023-04-30 at 5.43.32 PM.png' alt='Selected App Screenshot' id='proj-photo'/> : null }
+                                <span className='more-dtl'>
+                                    <div id='t-stack'>
+                                        <p className='t-title title fade-in'> Tech Stack </p>
+                                        <div className='stack-group fade-in'>
+                                            <img src='./Photos/icons8-html-5-is-a-software-solution-stack-that-defines-the-properties-and-behaviors-of-web-page-48.png' alt='HTML5 logo' className='icon shrink'/>
+                                            <img src='./Photos/icons8-cascading-style-sheets-language-used-for-describing-the-presentation-of-a-document-48.png' alt='CSS3 logo' className='icon shrink'/>
+                                            <img src='./Photos/icons8-javascript-48.png' alt='javascript logo' className='icon'/>
+                                            <img src='./Photos/icons8-react-100.png' alt='React logo' className='icon'/>
+                                            <img src='./Photos/icons8-sql-64.png' alt='SQL logo' className='icon i-grow'/>
+                                        </div>
+                                    </div>       
+                                </span>
+                            </div>
                             <div className='separate gap fade-in'>
                                 <div className='join'>
                                     <img src='./Photos/icons8-github-94.png' alt='place marker' className='place-mark i-grow'/>

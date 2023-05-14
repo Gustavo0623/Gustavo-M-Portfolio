@@ -448,7 +448,8 @@ h2 {
   width: 40px;
 }
 
-#t-stack > .stack-group > .icon {
+#intro > #t-stack > .stack-group > .icon,
+#intro-xp > #t-stack > .stack-group > .icon {
   cursor: help;
 }
 
@@ -567,6 +568,53 @@ h2 {
   object-fit: contain;
   flex: 3;
   border-radius: 7.5px;
+}
+
+/* to add pseudo elements to .more on hover */
+.more {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.more-dtl {
+  position: absolute;
+  display: none;
+  z-index: 0;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  z-index: 1;
+  padding: .5em;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  font-weight: bold;
+}
+
+.more:hover .more-dtl {
+  color: #000;
+  display: block;
+}
+
+.more::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.more:hover::after {
+  background-color: #fff9;
+  backdrop-filter: blur(1px);
+}
+
+.more-dtl > #t-stack {
+  width: 100%;
+  height: 100%;
 }
 
 /* About */
