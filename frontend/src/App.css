@@ -7,6 +7,7 @@ main {
   position: absolute;
   background-color: #F9f4F4;
   min-height: 100vh;
+  min-width: 100%;
 }
 
 * {
