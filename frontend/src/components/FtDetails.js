@@ -5,7 +5,7 @@ function FTDetails () {
 
     return (
         <div id='fitTrack' className='fade-in'>
-            <p className='msg' id='proj-role'><strong className='msg role'>Role: </strong> Project Lead</p>
+            <p className='msg' id='proj-role'><b className='msg role'>Role: Project Lead</b></p>
             
             <ul className='detail-list'>
                 <li className='list-item fade-in'>Led a three-member team to develop a fitness tracker application as the final project of a software development bootcamp</li>

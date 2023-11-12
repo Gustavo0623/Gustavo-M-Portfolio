@@ -5,7 +5,7 @@ function GoDetails () {
 
     return (
         <div id='fitTrack' className='fade-in'>
-            <p className='msg' id='proj-role'><strong className='msg role'>Role: </strong> Project Developer </p>
+            <p className='msg' id='proj-role'><b className='msg role'>Role: Project Developer </b></p>
             
             <ul className='detail-list'>
                 <li className='list-item fade-in'>Designing and developing the client-side of "Go-Bird-Go" using React, HTML, CSS, and Bootstrap, showcasing my front-end development skills.</li>
