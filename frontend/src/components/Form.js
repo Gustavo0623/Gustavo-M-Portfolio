@@ -29,11 +29,11 @@ function ContactForm() {
                 <div id='user-info'>
                     <div className='input'>
                         <label htmlFor="name" className='msg fade-in'>Name</label>
-                        <input type="text" id="name" name="user_name" className='fade-in' value={user_name} onChange={(event) => setName(event.target.value)} required />
+                        <input type="text" id="name" name="user_name" className='fade-in' value={user_name} onChange={(event) => setName(event.target.value)} autoComplete='on' required />
                     </div>
                     <div className='input'>
                         <label htmlFor="email" className='msg fade-in'>Email</label>
-                        <input type="email" id="email" className='fade-in' name="user_email" value={user_email} onChange={(event) => setEmail(event.target.value)} required />
+                        <input type="email" id="email" className='fade-in' name="user_email" value={user_email} onChange={(event) => setEmail(event.target.value)} autoComplete='on' required />
                     </div>
                 </div>
                 <div id='msg-content'>
