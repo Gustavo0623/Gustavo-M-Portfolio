@@ -27,19 +27,17 @@ const Projects = () => {
                         </div>
                         <div id='bg-display'>
                             <div id='pro-display'>
-                                { !details ? project === 0 ? <img src='./Photos/Screen Shot 2023-01-18 at 10.19.13 PM (2).jpg' alt='Selected App Screenshot' id='proj-photo' className='fade-in'/>: project === 1 ? <img src='./Photos/Screen Shot 2023-04-30 at 5.43.32 PM.png' alt='Selected App Screenshot' id='proj-photo' className="fade-in"/> : null : null}
-                                { !details ? <button id='toggle-view' className='gap tab msg fade-in' onClick={()=>{setDetails(true)}}> Details </button> : <button id='toggle-view' className='tab msg fade-in' onClick={()=>{setDetails(false)}}> Project Photo </button>}
-                                {/* Update to include GoDetails component!!! */}
-                                { details ? project === 0 ? <FTDetails/> : project === 1 ? <GoDetails/> : null : null }
-                            </div>
-                            <div className='separate gap fade-in'>
-                                <div className='join'>
-                                    <img src='./Photos/icons8-github-94.png' alt='place marker' className='place-mark i-grow'/>
-                                    <a href={ project === 0 ? 'https://github.com/proptechnovator/fittrack-v2' : 'https://github.com/Gustavo0623/Go-Bird-Go' } className='half proj-link msg link tab'> Code </a>
+                                { project === 0 ? <img src='./Photos/Screen Shot 2023-01-18 at 10.19.13 PM (2).jpg' alt='Selected App Screenshot' id='proj-photo' className='fade-in'/>: project === 1 ? <img src='./Photos/Screen Shot 2023-04-30 at 5.43.32 PM.png' alt='Selected App Screenshot' id='proj-photo' className="fade-in"/> : null}
+                                <div className='separate gap fade-in'>
+                                    <div className='join'>
+                                        <img src='./Photos/icons8-github-94.png' alt='place marker' className='place-mark i-grow'/>
+                                        <a href={ project === 0 ? 'https://github.com/proptechnovator/fittrack-v2' : 'https://github.com/Gustavo0623/Go-Bird-Go' } className='half proj-link msg link tab'> Code </a>
+                                    </div>
+                                    <div className='half proj-link' id='live'>
+                                        { project === 0 ? <a href='https://fittrack-frontend.herokuapp.com/' className='link msg tab'>Live Demo</a> : project === 1 ? <p className="msg" id='invalid'>Demo Coming Soon!</p> : null}
+                                    </div>
                                 </div>
-                                <div className='half proj-link' id='live'>
-                                    { project === 0 ? <a href='https://fittrack-frontend.herokuapp.com/' className='link msg tab'>Live Demo</a> : project === 1 ? <p className="msg" id='invalid'>Demo Coming Soon!</p> : null}
-                                </div>
+                                { project === 0 ? <FTDetails/> : project === 1 ? <GoDetails/> : null}
                             </div>
                             <p id='pro-link' className='msg fade-in'> 
                                 Like what you see?

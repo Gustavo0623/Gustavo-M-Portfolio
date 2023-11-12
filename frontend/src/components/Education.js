@@ -11,16 +11,16 @@ function Education () {
         <div id='bg-display'>
             <div className='stack-group fade-in'>
                 <div className='milestone'>
-                    <strong id='hs' className={edu === 0 ? 'msg select' : 'msg tabs'} onClick={() => {setEdu(0)}}>{edu !== 0 ? 'H.S.' : 'HS Diploma'}</strong>
+                    <strong id='pc' className={edu === 0 ? 'msg select' : 'msg tabs'} onClick={() => {setEdu(0)}}>Professional Certificate</strong>
                 </div>
                 <div className='milestone'>
-                    <strong id='asd' className={edu === 1 ? 'msg select' : 'msg tabs'} onClick={() => {setEdu(1)}}>{edu !== 1 ? 'A.S.' : "Associate's Degree"}</strong>
+                    <strong id='hs' className={edu === 1 ? 'msg select' : 'msg tabs'} onClick={() => {setEdu(1)}}>HS Diploma</strong>
                 </div>
                 <div className='milestone'>
-                    <strong id='pc' className={edu === 2 ? 'msg select' : 'msg tabs'} onClick={() => {setEdu(2)}}>{edu !== 2 ? 'P.C.' : 'Professional Certificate'}</strong>
+                    <strong id='asd' className={edu === 2 ? 'msg select' : 'msg tabs'} onClick={() => {setEdu(2)}}>Associate's Degree</strong>
                 </div>
             </div>
-            { edu === 0 ? <HighSchool/> : edu === 1 ? <College/> : edu === 2 ? <Certificate/> : null}
+            { edu === 0 ? <Certificate/> : edu === 1 ? <HighSchool/> : edu === 2 ? <College/> : null}
         </div>
     )
 }
