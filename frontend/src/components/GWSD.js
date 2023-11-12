@@ -5,7 +5,8 @@ const GWDetails = () => {
     return (
         <div id='fitTrack' className='fade-in'>
             <p className='msg' id='proj-role'><b className='msg role'>Digital Solutions Consultant</b></p>
-            
+            <p className='msg'><b className='msg role'>Skills:</b> Squarespace Expertise, Web Design, Domain Management, Search Engine Optimization (SEO), Online Presence Optimization, Client Training, Strategic Consulting, Problem-Solving, User Experience (UX) Enhancement, Live Website Transition, Digital Solutions Tailoring, Trend Integration, Effective Communication, Relationship Management.</p>
+            <b className='msg role'>Key Responsibilities:</b>
             <ul className='detail-list'>
                 <li className='list-item fade-in'>Provided expert guidance and consultation to clients seeking digital solutions for their business.</li>
                 <li className='list-item fade-in'>Collaborated closely with clients to understand their specific needs and business goals.</li>
