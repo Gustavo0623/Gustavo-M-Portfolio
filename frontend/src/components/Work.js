@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import IndepC from "./IndepC";
 import SelfE from "./SelfE";
+import Vertex from "./Vertex";
 
 function Work () {
 
@@ -10,13 +11,16 @@ function Work () {
         <div id='bg-display'>
             <div className='stack-group fade-in'>
                 <div className='p-c'>
-                    <strong id='s-e' className={work === 0 ? 'msg select' : 'msg tab'} onClick={() => {setWork(0)}}>Self Employed</strong>
+                    <strong id='vertex' className={work === 0 ? 'msg select' : 'msg'} onClick={() => {setWork(0)}}>Frontend Developer</strong>
                 </div>
                 <div className='p-c'>
-                    <strong id='i-c' className={work === 1 ? 'msg select' : 'msg tab'} onClick={() => {setWork(1)}}>Independent Contractor</strong>
+                    <strong id='s-e' className={work === 1 ? 'msg select' : 'msg'} onClick={() => {setWork(1)}}>Self Employed</strong>
+                </div>
+                <div className='p-c'>
+                    <strong id='i-c' className={work === 2 ? 'msg select' : 'msg'} onClick={() => {setWork(2)}}>Independent Contractor</strong>
                 </div>
             </div>
-            { work === 0 ? <SelfE/> : work === 1 ? <IndepC/> : null}
+            { work === 0 ? <Vertex/> : work === 1 ? <SelfE/> : work === 2 ? <IndepC/> : null}
         </div>
     )
 }

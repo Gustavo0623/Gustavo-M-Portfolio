@@ -271,6 +271,9 @@ main {
   display: flex;
   margin: auto;
   text-align: center;
+  border-radius: 8px;
+  padding: .5rem;
+  background-color: #00000010;
 }
 
 .link {
@@ -344,15 +347,14 @@ main {
 }
 
 #showcase {
-  margin-top: 1.5em;
+  margin-top: 1rem;
+  border-top: 1px solid #00000030;
   flex-wrap: wrap;
-  gap: 2em;
 }
 
 
 h1, h2 {
-  margin-top: 0;
-  align-self: left;
+  margin: 0 0 1rem 0;
   text-align: left;
 }
 
@@ -424,7 +426,7 @@ h2 {
 }
 
 .msg, .proj, .description, .list-item {
-  line-height: 2em;
+  line-height: 2rem;
 }
 
 #title {
@@ -490,10 +492,10 @@ h2 {
 
 .stack-group {
   margin-top: 1em;
-  width: 100%;
+  width: calc(100% - 2rem);
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: stretch;
 }
 
 /* project highlight */
@@ -501,9 +503,11 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-right: 1rem;
+  border-right: 1px solid #00000030;
 }
 
-#display, .about, .blur {
+.about, .blur {
   width: 60%;
   display: flex;
   flex-direction: column;
@@ -512,7 +516,11 @@ h2 {
 }
 
 #display {
-  flex: .5 0 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 0 400px;
+  padding: 1rem 0 1rem 1rem;
 }
 
 .separate {
@@ -559,8 +567,8 @@ h2 {
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 2em;
-  margin: auto;
+  gap: 1rem;
+  padding: 1rem 0;
 }
 
 #proj-photo {
@@ -641,20 +649,23 @@ h2 {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: stretch;
 }
 
 #bg-split {
   align-items: stretch;
   margin-top: 1em;
-  gap: 1em;
+  border-top: 1px solid #00000030;
 }
 
 #bg-content {
   display: flex;
   flex-direction: column;
-  width: 25%;
-  gap: 2em;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 8px 0 0 8px;
+  flex: 1;
+  border-right: 1px solid #00000030;
 }
 
 
@@ -662,14 +673,15 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: 70%;
+  align-items: stretch;
+  padding: 1rem 0 1rem 1rem;
+  flex: 4;
 }
 
 #bg-display > .stack-group {
-  justify-content: space-between;
+  width: 100%;
   margin-top: 0%;
-  gap: 1em;
+  gap: 1rem;
 }
 
 #bg-content > h3 {
@@ -679,10 +691,17 @@ h2 {
 
 .p-c, .milestone {
   text-align: center;
+  flex: 1 1 185px;
+  display: flex;
+  align-items: stretch;
 }
 
 h3 {
   font-size: 1em;
+}
+
+#bg-split #bg-content {
+  padding-left: 0;
 }
 
 /* Projects */
@@ -690,51 +709,64 @@ h3 {
 #pro-tabs {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  gap: 1rem;
   align-items: center;
+  padding: 1rem 0;
+  border-top: 1px solid #00000030;
+  border-bottom: 1px solid #00000030;
 }
 
 #pro-split {
-  margin-top: 1.5em;
-  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#pro-split #bg-display {
+  padding: 1rem 0 0 1rem;
+}
+#pro-split #bg-content {
+  padding: 1rem 1rem 0 0;
+  flex-wrap: wrap;
 }
 
 #pro-split > #bg-content > h3 {
   cursor: pointer;
 }
 
-.tab, .select, .t-select {
+.tabs, .tab, .select, .t-select {
   margin: 0%;
-  line-height: 2em;
+  line-height: 2rem;
   cursor: pointer;
   position: relative;
   display: inline-block;
 }
 
-.equalize {
-  width: 120px;
+.select, .t-select {
+  outline: 1px solid #00000070;
+}
+
+.equalize, .drop {
+  background-color: #00000010;
   text-align: center;
+  border-radius: 8px;
 }
 
-.select::before, .t-select::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #000;
+.drop {
+  padding: .5rem;
 }
 
-.select::after, .t-select::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #000;
+.drop:hover {
+  background-color: #00000030;
 }
+
+.equalize {
+  flex: 1;
+}
+
+.equalize:hover {
+  background-color: #00000030;
+}
+
+
 
 .tab::before {
   content: '';
@@ -783,8 +815,8 @@ h3 {
   border: none;
   background-color: transparent;
   cursor: pointer;
-  font-size: 1em;
   font-weight: bold;
+  font-size: 16px;
 }
 
 .role {
@@ -817,7 +849,7 @@ h3 {
   flex-direction: row;
 }
 
-#msg-area, .list, .ms-description{
+#msg-area, .list{
   width: 100%;
 }
 
@@ -864,14 +896,62 @@ input {
 
 #socials > .stack-group {
   justify-content: space-between;
+  width: auto;
 }
 
+#s-e, #i-c, #hs, #asd, #pc, #vertex {
+  background-color: #00000010;
+  border-radius: 8px;
+  padding: 0 1rem;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#s-e:hover, #i-c:hover, #hs:hover, #asd:hover, #pc:hover, #vertex:hover, .t-title:hover {
+  background-color: #00000030;
+}
+
+
+#intro .t-title:hover {
+  background-color: transparent;
+}
+
+#intro .t-title {
+  background-color: transparent;
+  padding: 0;
+}
+
+.proj {
+  padding: 0 .5rem;
+  border-radius: 8px;
+  background-color: #00000010;
+  text-align: center;
+}
+.proj:hover {
+  background-color: #00000030;
+}
+
+#msg-area {
+  padding: 1rem 0;
+  border-top: 1px solid #00000030;
+}
+
+#msg-area h2 {
+  margin-bottom: 1rem;
+}
+
+
 @media screen and (max-width: 934px) {
+  .proj {
+    padding: 0 .5rem;
+    flex: 1;
+  }
 
   #selector {
     flex-direction: row;
     width: 100%;
-    justify-content: space-between;
   }
 
   #sep-contact > .h-contact {
@@ -886,25 +966,81 @@ input {
 
   #display {
     width: 100%;
+    padding: 1rem 0;
     flex: 1 0 100px;
   }
 
   .left-show {
     width: 100%;
-    margin: auto;
+    padding: 0;
+    border-right: 0;
+    border-bottom: 1px solid #00000030;
   }
-
+  
   .info {
     flex: 1 0 100%;
   }
-
+  
   #showcase {
     flex-direction: column;
+  }
+  #bg-content > h3 {
+    flex: 1 1 200px;
+    text-align: center;
+  }
+  
+  #bg-display > .stack-group {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #00000030;
+    flex-wrap: wrap;
+  }
+  
+  #bg-display, #pro-split #bg-display {
+    width: 100%;
+    padding: 1rem 0;
+  }
+  
+  #bg-content {
+    padding: 1rem 0;
+    flex-direction: row;
+    border-radius: 8px 8px 0 0;
+    justify-content: space-around;
+    align-items: stretch;
+    border-right: 0;
+    border-bottom: 1px solid #00000030;
+  }
+  #pro-split > #bg-content > h3 {
+    width: 100px;
+    text-align: center;
+  }
+  
+  #pro-split > #bg-content {
+    width: 100%;
+    padding: 1rem 0 1rem 0;
+  }
+  .drop {
+    padding: 0;
+    flex: 1 1 200px;
+  }
+  
+  #pro-split {
+    align-items: center;
+  }
+  
+  
+  
+  #bg-split, #pro-split {
+    flex-direction: column;
+  }
+
+  .t-title {
+    padding: 0 .5rem;
   }
 } 
 
 @media screen and (max-width: 768px) {
-
+  
+  
   #msg-content {
     flex: 1 0 280px;
   }
@@ -924,50 +1060,6 @@ input {
     font-size: 16px;
   }
 
-  #pro-split > #bg-content > h3 {
-    width: 100px;
-    text-align: center;
-  }
-
-  #pro-split > #bg-content {
-    gap: 0;
-  }
-
-  #pro-split {
-    gap: 2em;
-    align-items: center;
-  }
-
-  #s-e, #i-c, #hs, #asd, #pc {
-    width: 100%;
-  }
-
-  .p-c, .milestone {
-    width: 45%;
-  }
-
-  #bg-content > h3 {
-    width: 80px;
-    text-align: center;
-  }
-
-  #bg-display > .stack-group {
-    flex-direction: column;
-  }
-
-  #bg-display {
-    width: 100%;
-  }
-
-  #bg-content {
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-around;
-  }
-
-  #bg-split, #pro-split {
-    flex-direction: column;
-  }
 
   #portrait {
     width: 220px;
@@ -1014,6 +1106,10 @@ input {
   #logo-img {
     width: 200px;
   }
+
+  .msg, .proj, .description, .list-item, #toggle-view{
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -1026,7 +1122,7 @@ input {
     flex: 1 0 200px;
   }
 
-  .drop, #toggle-view {
+  .drop {
     font-size: 14px;
   }
 
@@ -1037,10 +1133,6 @@ input {
     text-align: center;
   }
 
-  .left-show {
-    width: 40%;
-  }
-
   #t-stack {
     width: 100%;
   }
@@ -1049,7 +1141,7 @@ input {
     width: 30px;
   }
 
-  .msg, .proj, .description, .list-item {
+  .msg, .proj, .description, .list-item, #toggle-view{
     font-size: 12px;
   }
 
@@ -1080,25 +1172,8 @@ input {
 
 @media screen and (max-width: 438px) {
 
-  .p-c, .milestone {
-    width: 65%;
-  }
-
   .menu-icon {
     width: 18px;
     height: 18px;
-  }
-} 
-
-@media screen and (max-width: 420px) {
-
-  .left-show {
-    width: 50%;
-  }
-} 
-
-@media screen and (max-width: 320px) {
-  .p-c, .milestone {
-    width: 75%;
   }
 } 

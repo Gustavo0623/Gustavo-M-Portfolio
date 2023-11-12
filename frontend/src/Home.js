@@ -95,9 +95,9 @@ const Home = () => {
                     <div id='showcase'>
                         <div className='left-show fade-in'>    
                             <div id='selector'>
-                                <h3 className={project === 0 ? 'proj msg select' : 'proj msg tab' } onClick={()=>{setProject(0)}} >Fit-Track</h3>
-                                <h3 className={project === 1 ? 'proj msg select' : 'proj msg tab' } onClick={()=>{setProject(1)}} >Go-Bird-Go</h3>
-                                <a href='/projects' className='proj-link proj msg link tab'>More Projects!</a>
+                                <h3 className={project === 0 ? 'proj msg select' : 'proj msg tabs' } onClick={()=>{setProject(0)}} >Fit-Track</h3>
+                                <h3 className={project === 1 ? 'proj msg select' : 'proj msg tabs' } onClick={()=>{setProject(1)}} >Go-Bird-Go</h3>
+                                <a href='/projects' className='proj-link proj msg link tabs'>More Projects!</a>
                             </div>
                         </div>
                         <div id='display' className='fade-in'>
@@ -120,10 +120,10 @@ const Home = () => {
                             <div className='separate gap fade-in'>
                                 <div className='join'>
                                     <img src='./Photos/icons8-github-94.png' alt='place marker' className='place-mark i-grow'/>
-                                    <a href={ project === 0 ? 'https://github.com/proptechnovator/fittrack-v2' : 'https://github.com/Gustavo0623/Go-Bird-Go' } className='half proj-link proj link tab'> Code </a>
+                                    <a href={ project === 0 ? 'https://github.com/proptechnovator/fittrack-v2' : 'https://github.com/Gustavo0623/Go-Bird-Go' } className='half proj-link msg link tab'> Code </a>
                                 </div>
-                                <div className='half proj-link proj' id='live'>
-                                    { project === 0 ? <a href='https://fittrack-frontend.herokuapp.com/' className='link tab'>Live Demo</a> : project === 1 ? <p className='select' id='invalid'>Demo Coming Soon!</p> : null}
+                                <div className='half proj-link' id='live'>
+                                    { project === 0 ? <a href='https://fittrack-frontend.herokuapp.com/' className='link msg tab'>Live Demo</a> : project === 1 ? <p className='msg' id='invalid'>Demo Coming Soon!</p> : null}
                                 </div>
                             </div>
                         </div>
