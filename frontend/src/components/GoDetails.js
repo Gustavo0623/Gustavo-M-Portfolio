@@ -6,7 +6,7 @@ function GoDetails () {
     return (
         <div id='fitTrack' className='fade-in'>
             <p className='msg' id='proj-role'><b className='msg role'>Project Developer </b></p>
-            <p className='msg'><b className='msg role'>Skills:</b> React, HTML, CSS, Bootstrap, Node, Express, PostgreSQL, Full-stack Development, Responsive Design, UX/UI Design, Game Logic, Testing, Debugging, Project Management, Technical Writing</p>
+            <p className='msg'><b className='msg role'>Skills:</b> React, HTML, CSS, Bootstrap, Node, Express, PostgreSQL, Full-stack Development, Responsive Design, UX/UI Design, Game Logic, Testing, Debugging, Project Management, and Technical Writing.</p>
             <b className='msg role'>Key Responsibilities:</b>
             <ul className='detail-list'>
                 <li className='list-item fade-in'>Designing and developing the client-side of "Go-Bird-Go" using React, HTML, CSS, and Bootstrap, showcasing my front-end development skills.</li>
