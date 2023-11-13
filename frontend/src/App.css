@@ -944,6 +944,34 @@ input {
   margin-bottom: 1rem;
 }
 
+/* Loading */
+#loadingBox {
+  margin: 2rem;
+  border-radius: 8px;
+  padding: 2rem;
+}
+#loading {
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  margin: 2rem auto;
+  border: 5px solid transparent;
+  border-top: 5px solid #a1fbfe;
+  border-bottom: 5px solid #a1fbfe;
+  border-radius: 50%;
+  animation: spin2 2s linear infinite;
+}
+
+@keyframes spin2 {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#thanks {
+  padding-top: 1rem;
+  border-top: 1px solid #00000030;
+}
+
 
 @media screen and (max-width: 934px) {
   .proj {
