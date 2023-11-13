@@ -40,7 +40,7 @@ const Home = () => {
                     <div className='split fade-in'>
                         <div className='info'>
                             <p className='description fade-in'> Full Stack Software Developer breaking into the tech industry. </p>
-                            <div className='join fade-in'>
+                            <div id='homeJoin' className='join fade-in'>
                                 <img src='./Photos/icons8-place-marker-94.png' alt='place marker' className='place-mark'/>
                                 <p className='description'>Spring Valley, California, USA</p>
                             </div>

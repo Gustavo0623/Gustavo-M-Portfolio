@@ -2,7 +2,7 @@ main {
   z-index: -1;
   background-image: url('../public/Photos/background3.svg'), url('../public/Photos/background.svg'), url('../public/Photos/background2.svg');
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-attachment: fixed;
   position: absolute;
   background-color: #F9f4F4;
@@ -107,6 +107,9 @@ main {
 
 .fade-in:nth-child(7) {
   animation-delay: 1.2s;
+}
+.fade-in:nth-child(8) {
+  animation-delay: 1.4s;
 }
 
 @keyframes scale-small {
@@ -286,6 +289,10 @@ main {
 }
 
 /* Home */
+
+#homeJoin {
+  justify-content: flex-start;
+}
 
 #intro, #intro-xp, #proj-home, #quick-links, #w-status {
   width: 60%;
