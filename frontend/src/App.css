@@ -294,7 +294,7 @@ main {
   justify-content: flex-start;
 }
 
-#intro, #intro-xp, #proj-home, #quick-links, #w-status {
+#intro, #intro-xp, #proj-home, #quick-links, #w-status, #testimonials {
   width: 60%;
   height: 100%;
   margin-top: 120px;
@@ -366,8 +366,13 @@ h1, h2 {
   text-align: left;
 }
 
-#proj-home > h2, #intro > h1, #intro-xp > h1 {
+#proj-home > h2, #intro > h1, #intro-xp > h1, #testimonials h2, #testimonials p{
   width: 100%;
+}
+
+#testimonials > img {
+  width: 100%;
+  border-radius: 15px;
 }
 
 
@@ -490,8 +495,8 @@ h2 {
   width: 100%;
 }
 
-#otw, #proj-home, #home-contact, .blur {
-  padding: 1em;
+#otw, #proj-home, #home-contact, .blur, #testimonials {
+  padding: 1rem;
 }
 
 #t-stack {
@@ -1132,7 +1137,7 @@ input {
     text-align: center;
   }
 
-  #intro, #intro-xp, #proj-home, #quick-links, #w-status {
+  #intro, #intro-xp, #proj-home, #quick-links, #w-status, #testimonials {
     width: 75%;
   }
 

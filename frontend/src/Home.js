@@ -75,7 +75,7 @@ const Home = () => {
                 </div>
 
                 {/* Work Status */}
-                <div id='w-status' className=''>
+                <div id='w-status'>
                     <div id='otw'>
                         <h2 className='title fade-in'> Open To Work! </h2>
                         <p className='msg fade-in'> 
@@ -90,7 +90,7 @@ const Home = () => {
                 </div>
 
                 {/* project display */} 
-                <div id='proj-home' className=''> 
+                <div id='proj-home'> 
                     <h2 className='title fade-in'> Project Highlights </h2>
                     <div id='showcase'>
                         <div className='left-show fade-in'>    
@@ -129,6 +129,14 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+
+                {/* Testimonials */}
+                <div id='testimonials' className='blur'>
+                    <h2 className='title fade-in'> Testimonials </h2>
+                    <p className='msg title fade-in'> All Testimonials Verified By <a href='https://www.upwork.com/freelancers/~012442e0ee46047e92?viewMode=1' className='link tab'>UpWork</a>.</p>
+                    <img src='./Photos/testimonial.png' alt='positive client testional'/>
+                </div>
+
                 {/* quick links */}
                 <div id='quick-links'>
                     <div id='home-contact'>
