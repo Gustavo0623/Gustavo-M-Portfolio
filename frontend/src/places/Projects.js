@@ -13,7 +13,7 @@ const Projects = () => {
     const [project, setProject] = useState(0)
 
     return (
-        <main data-speed='1'>
+        <main >
             <div className='about fade-in'>
                 <div className={navState ? 'blur pad-xp bottom' : 'blur pad bottom'}>
                     <h1 className='fade-in title'>A Glimpse Of What Is Possible</h1>

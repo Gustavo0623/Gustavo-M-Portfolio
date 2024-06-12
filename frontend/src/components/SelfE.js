@@ -6,7 +6,7 @@ function SelfE() {
                 <p className='msg fade-in'>Landscape Specialist &amp; Arborist</p>
             </div>
             <div className='list'>
-                <p className='msg fade-in'><strong>Transferrable Skills:</strong> &amp; how they help me be a better Software Developer</p>
+                <p className='msg fade-in'><strong>Transferrable Skills</strong> &amp; how they help me be a better Software Developer</p>
                 <ul className='detail-list'>
                     <li className='list-item fade-in'><strong>Attention to Detail:</strong> I pay attention to the details of a project, such as plant placement, soil conditions, and tree health. This skill can be applied to software development, where attention to detail is crucial for bug-free code.</li>
                     <li className='list-item fade-in'><strong>Project Management:</strong> I am responsible for managing projects from start to finish, including creating timelines, managing resources, and delivering on time. These skills can be applied to software development, where project management is essential for delivering software on time.</li>

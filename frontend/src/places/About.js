@@ -9,7 +9,7 @@ const About = () => {
     const [edu, setEdu] = useState(true)
 
     return (
-        <main data-speed='1'>
+        <main>
             <div className='about fade-in'>
                 <div className={navState ? 'blur pad-xp' : 'blur pad'}>
                     <h1 className='fade-in title'>Who Is Gustavo Martinez?</h1>

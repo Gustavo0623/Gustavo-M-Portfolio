@@ -11,7 +11,7 @@ function Work () {
         <div id='bg-display'>
             <div className='stack-group fade-in'>
                 <div className='p-c'>
-                    <strong id='vertex' className={work === 0 ? 'msg select' : 'msg'} onClick={() => {setWork(0)}}>Frontend Developer</strong>
+                    <strong id='vertex' className={work === 0 ? 'msg select' : 'msg'} onClick={() => {setWork(0)}}>Freelance Software Developer</strong>
                 </div>
                 <div className='p-c'>
                     <strong id='s-e' className={work === 1 ? 'msg select' : 'msg'} onClick={() => {setWork(1)}}>Self Employed</strong>

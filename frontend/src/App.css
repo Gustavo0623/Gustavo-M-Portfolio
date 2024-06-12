@@ -1,13 +1,9 @@
 main {
   z-index: -1;
-  background-image: url('../public/Photos/background3.svg'), url('../public/Photos/background.svg'), url('../public/Photos/background2.svg');
-  background-size: cover;
-  background-repeat: repeat;
+  background-image: linear-gradient(to right bottom, #a1fbfe, #6ae7ff, #49d0ff, #66b2ff, #9c8eff, #ae7dfc, #c367f3, #d94ae5, #c55bea, #b068ed, #9d72ed, #8b7aea);
   background-attachment: fixed;
   position: absolute;
-  background-color: #F9f4F4;
-  min-height: 100vh;
-  min-width: 100%;
+  width: 100%;
 }
 
 * {

@@ -31,7 +31,7 @@ const Home = () => {
     }, 5000)
 
     return (
-        <main data-speed='1'>
+        <main >
             <div className='scroll'>
                 <div id={navState ? 'intro-xp' : 'intro'} className='fade-in'>
                     <div id='title'>
@@ -133,7 +133,7 @@ const Home = () => {
                 {/* Testimonials */}
                 <div id='testimonials' className='blur'>
                     <h2 className='title fade-in'> Testimonials </h2>
-                    <p className='msg title fade-in'> All Testimonials Verified By <a href='https://www.upwork.com/freelancers/~012442e0ee46047e92?viewMode=1' className='link tab'>UpWork</a>.</p>
+                    <p className='msg title fade-in'> All Testimonials Verified By <a href='https://www.upwork.com/freelancers/~012442e0ee46047e92?viewMode=1' className='link tab'>UpWork</a> and <a href='https://www.linkedin.com/in/gustavo-martinez-765940204/' className='link tab'>LinkedIn</a>.</p>
                     <img src='./Photos/testimonial.png' alt='positive client testional'/>
                 </div>
 

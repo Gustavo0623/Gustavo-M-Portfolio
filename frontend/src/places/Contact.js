@@ -7,7 +7,7 @@ const Contact = () => {
     const { navState } = useContext(NavContext);
 
     return (
-        <main className='about' data-speed='1'>
+        <main className='about' >
             <div className={navState ? 'blur pad-xp' : 'blur pad'}>
                 <h1 id='c-me' className='fade-in title'>Contact Me</h1>
                 <div id='msg-area'>
