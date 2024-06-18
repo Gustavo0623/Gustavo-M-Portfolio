@@ -1,9 +1,10 @@
 function IndepC() {
+    // test
     return (
         <div className='ms-description fade-in'>
             <div className='list'>
                 <p className='msg fade-in'><strong>Title</strong></p>
-                <p className='msg fade-in'>Food Delivery Driver </p>
+                <p className='msg fade-in'>Food Delivery Driver</p>
             </div>
             <div className='list'>
                 <p className='msg fade-in'><strong>Transferrable Skills</strong> &amp; how they help me be a better Software Developer</p>
